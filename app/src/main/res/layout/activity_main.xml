@@ -5,8 +5,10 @@
     android:id="@+id/sign_up"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginpageback"
+    android:background="@drawable/signupback"
+
     tools:context=".MainActivity">
+
 
     <EditText
         android:id="@+id/loginEmail"
@@ -64,7 +66,20 @@
         android:textAppearance="@style/sign_in"
         android:textStyle="bold" />
 
-
+    <TextView
+        android:id="@+id/welcome_bac"
+        android:layout_width="117dp"
+        android:layout_height="88dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="133dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_horizontal|top"
+        android:text="@string/welcome_bac"
+        android:textAppearance="@style/welcome_bac"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/dont_have_a"
@@ -72,11 +87,23 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="712dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="677dp"
         android:gravity="center_horizontal|top"
         android:text="@string/dont_have_a"
         android:textAppearance="@style/dont_have_a" />
+
+    <ImageView
+        android:id="@+id/loginpic"
+        android:layout_width="196dp"
+        android:layout_height="184dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="170dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="115dp"
+        android:background="@drawable/loginpic"
+        />
 
 
 </RelativeLayout>
