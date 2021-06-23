@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Appointment App</string>
+    <string name="register_wi">register_wi</string>
+    <string name="forgot_pass">forgot_pass</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="enter_your_email">Enter your email</string>
+
+    <string name="dont_have_a">
+
+    Dont have an account? Sign Up
+    </string>
+
+</resources>
