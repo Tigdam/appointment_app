@@ -27,6 +27,7 @@
     <string name="address">Address</string>
     <string name="save">SAVE</string>
 
+
     <string-array name="gender_array">
         <item>Male</item>
         <item>Female</item>
