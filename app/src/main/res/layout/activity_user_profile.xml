@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_Profile"
+    android:background="@drawable/signupback">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profile_img"
+                android:layout_width="136dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="138dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:elevation="4dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/edit_profil"
+                android:layout_width="134dp"
+                android:layout_height="29dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="136dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="189dp"
+                android:text="@string/edit_profil"
+                android:textAppearance="@style/edit_profil"
+                android:gravity="center_horizontal|top" />
+
+            <TextView
+                android:id="@+id/first_name_"
+                android:layout_width="89dp"
+                android:layout_height="17dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="240dp"
+                android:text="@string/first_name_"
+                android:textAppearance="@style/first_name_"
+                android:gravity="top"
+                />
+
+            <TextView
+                android:id="@+id/last_name_"
+                android:layout_width="89dp"
+                android:layout_height="17dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="224dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="240dp"
+                android:text="@string/last_name_"
+                android:textAppearance="@style/last_name_"
+                android:gravity="top"
+                />
+
+            <EditText
+                android:id="@+id/rectangle_1"
+                android:layout_width="158dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="267dp"
+                android:background="@drawable/rectangle_1"
+                />
+
+            <EditText
+                android:id="@+id/rectangle_1"
+                android:layout_width="158dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="217dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="266dp"
+                android:background="@drawable/rectangle_1"
+                />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="62dp"
+                android:layout_height="17dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="45dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="305dp"
+                android:text="@string/email"
+                android:textAppearance="@style/email"
+                android:gravity="top"
+                />
+
+            <EditText
+                android:id="@+id/rectangle_1"
+                android:layout_width="328dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="43dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="332dp"
+                android:background="@drawable/rectangle_1"
+                />
+
+            <TextView
+                android:id="@+id/date_of_bir"
+                android:layout_width="94dp"
+                android:layout_height="17dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="43dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="380dp"
+                android:text="@string/date_of_bir"
+                android:textAppearance="@style/date_of_bir"
+                android:gravity="top"
+                />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="94dp"
+                android:layout_height="17dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="216dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="379dp"
+                android:text="@string/gender"
+                android:textAppearance="@style/gender"
+                android:gravity="top"
+                />
+
+            <Spinner
+                android:id="@+id/gender_spinner"
+                android:layout_width="158dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="43dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="406dp"
+                android:background="@drawable/rectangle_1" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

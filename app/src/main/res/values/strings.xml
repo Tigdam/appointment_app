@@ -8,12 +8,22 @@
     <string name="dont_have_a">Dont have an account?</string>
     <string name="welcome_bac">Welcome Back ! </string>
     <string name="full_name">Full Name</string>
-    <string name="email">Email</string>
+    <string name="email">Email+</string>
     <string name="reg_password">New password</string>
     <string name="confirm_password">Confirm password</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="already_hav">Already have an account?</string>
+    <string name="edit_profil">Edit Profile</string>
+    <string name="first_name_">First Name*</string>
+    <string name="last_name_">Last Name*</string>
+    <string name="date_of_bir">Date of Birth*</string>
+    <string name="gender">Gender*</string>
 
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
 
 </resources>
