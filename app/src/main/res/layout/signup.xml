@@ -41,18 +41,18 @@
         android:id="@+id/username"
         android:layout_width="308dp"
         android:layout_height="45dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="34dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="227dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="234dp"
         android:background="@drawable/roundtxtbox"
         android:hint="@string/full_name"
         android:inputType="textPersonName"
+        android:paddingStart="16dp"
         android:paddingLeft="16dp"
         android:textColorHint="#A8504C4C"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="34dp"
-        android:paddingStart="16dp"
         tools:ignore="RtlSymmetry" />
 
     <EditText
@@ -62,8 +62,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="33dp"
-        android:layout_marginLeft="33dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
         android:layout_marginTop="304dp"
         android:background="@drawable/roundtxtbox"
         android:hint="@string/email"
@@ -74,7 +74,7 @@
         tools:ignore="RtlSymmetry,TextFields" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/new_password"
         android:layout_width="308dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
@@ -90,7 +90,7 @@
         tools:ignore="RtlSymmetry,TextFields" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/confirm_password"
         android:layout_width="308dp"
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
@@ -98,7 +98,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="446dp"
         android:background="@drawable/roundtxtbox"
-        android:hint="@string/reg_password"
+        android:hint="@string/"
         android:inputType="textPassword"
         android:paddingStart="16dp"
         android:paddingLeft="16dp"
