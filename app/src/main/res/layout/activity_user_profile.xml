@@ -262,7 +262,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="7dp"
                 android:maxLength="3"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:background="@drawable/rectangle_1" />
 
             <EditText
@@ -276,7 +276,7 @@
                 android:textSize="@dimen/txtsize"
                 android:paddingLeft="10dp"
                 android:paddingRight="7dp"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:maxLength="3"
                 android:background="@drawable/rectangle_1" />
 
