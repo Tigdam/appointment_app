@@ -284,7 +284,25 @@
                 android:layout_marginTop="724dp"
                 android:background="@drawable/rectangle_1" />
 
+            <Button
+                android:id="@+id/save"
+                android:layout_width="87dp"
+                android:layout_height="29dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="39dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="861dp"
+                android:background="@drawable/save"/>
 
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="87dp"
+                android:layout_height="29dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="153dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="861dp"
+                android:background="@drawable/cancel"/>
 
 
         </RelativeLayout>
