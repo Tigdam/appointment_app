@@ -60,7 +60,7 @@ public class User_Profile extends AppCompatActivity {
 
                                 }
                             }, mYear, mMonth, mDay);
-                    datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis()-1000);
+                   // datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis()-1000);
                     datePickerDialog.show();
                 }
 

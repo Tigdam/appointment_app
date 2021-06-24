@@ -23,6 +23,9 @@
     <string name="profession_">Profession/Occupation</string>
     <string name="weight">Weight</string>
     <string name="height">Height</string>
+    <string name="any_medical">Any Medical Condition?</string>
+    <string name="address">Address</string>
+    <string name="save">SAVE</string>
 
     <string-array name="gender_array">
         <item>Male</item>

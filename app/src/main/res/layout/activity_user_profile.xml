@@ -33,118 +33,110 @@
                 android:layout_width="134dp"
                 android:layout_height="29dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="136dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="136dp"
                 android:layout_marginTop="189dp"
+                android:gravity="center_horizontal|top"
                 android:text="@string/edit_profil"
-                android:textAppearance="@style/edit_profil"
-                android:gravity="center_horizontal|top" />
+                android:textAppearance="@style/edit_profil" />
 
             <TextView
                 android:id="@+id/first_name_"
                 android:layout_width="89dp"
                 android:layout_height="17dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="45dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="45dp"
                 android:layout_marginTop="240dp"
-                android:text="@string/first_name_"
-                android:textAppearance="@style/first_name_"
                 android:gravity="top"
-                />
+                android:text="@string/first_name_"
+                android:textAppearance="@style/first_name_" />
 
             <TextView
                 android:id="@+id/last_name_"
                 android:layout_width="89dp"
                 android:layout_height="17dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="224dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="224dp"
                 android:layout_marginTop="240dp"
-                android:text="@string/last_name_"
-                android:textAppearance="@style/last_name_"
                 android:gravity="top"
-                />
+                android:text="@string/last_name_"
+                android:textAppearance="@style/last_name_" />
 
             <EditText
                 android:id="@+id/fname"
                 android:layout_width="158dp"
                 android:layout_height="28dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="45dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="45dp"
                 android:layout_marginTop="267dp"
-                android:background="@drawable/rectangle_1"
-                />
+                android:background="@drawable/rectangle_1" />
 
             <EditText
                 android:id="@+id/lname"
                 android:layout_width="158dp"
                 android:layout_height="28dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="217dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="217dp"
                 android:layout_marginTop="266dp"
-                android:background="@drawable/rectangle_1"
-                />
+                android:background="@drawable/rectangle_1" />
 
             <TextView
                 android:id="@+id/email"
                 android:layout_width="62dp"
                 android:layout_height="17dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="45dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="45dp"
                 android:layout_marginTop="305dp"
-                android:text="@string/email"
-                android:textAppearance="@style/email"
                 android:gravity="top"
-                />
+                android:text="@string/email"
+                android:textAppearance="@style/email" />
 
             <EditText
                 android:id="@+id/emailid"
                 android:layout_width="328dp"
                 android:layout_height="28dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="43dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="43dp"
                 android:layout_marginTop="332dp"
-                android:background="@drawable/rectangle_1"
-                />
+                android:background="@drawable/rectangle_1" />
 
             <TextView
                 android:id="@+id/date_of_bir"
                 android:layout_width="94dp"
                 android:layout_height="17dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="43dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="43dp"
                 android:layout_marginTop="380dp"
-                android:text="@string/date_of_bir"
-                android:textAppearance="@style/date_of_bir"
                 android:gravity="top"
-                />
+                android:text="@string/date_of_bir"
+                android:textAppearance="@style/date_of_bir" />
 
             <TextView
                 android:id="@+id/gender"
                 android:layout_width="94dp"
                 android:layout_height="17dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="216dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="216dp"
                 android:layout_marginTop="379dp"
-                android:text="@string/gender"
-                android:textAppearance="@style/gender"
                 android:gravity="top"
-                />
+                android:text="@string/gender"
+                android:textAppearance="@style/gender" />
 
             <EditText
                 android:id="@+id/dob"
                 android:layout_width="158dp"
                 android:layout_height="28dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="43dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="43dp"
                 android:layout_marginTop="406dp"
                 android:background="@drawable/rectangle_1" />
 
@@ -153,47 +145,44 @@
                 android:layout_width="158dp"
                 android:layout_height="28dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="216dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="216dp"
                 android:layout_marginTop="405dp"
-                android:background="@drawable/rectangle_1"/>
+                android:background="@drawable/rectangle_1" />
 
             <TextView
                 android:id="@+id/mobile_no_"
                 android:layout_width="87dp"
                 android:layout_height="17dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="45dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="45dp"
                 android:layout_marginTop="461dp"
-                android:text="@string/mobile_no_"
-                android:textAppearance="@style/mobile_no_"
                 android:gravity="top"
-                />
+                android:text="@string/mobile_no_"
+                android:textAppearance="@style/mobile_no_" />
 
             <EditText
                 android:id="@+id/mobile"
                 android:layout_width="156dp"
                 android:layout_height="28dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="43dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="43dp"
                 android:layout_marginTop="480dp"
-                android:background="@drawable/rectangle_1"
-                />
+                android:background="@drawable/rectangle_1" />
 
             <TextView
                 android:id="@+id/profession_"
                 android:layout_width="156dp"
                 android:layout_height="17dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="216dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="216dp"
                 android:layout_marginTop="456dp"
-                android:text="@string/profession_"
-                android:textAppearance="@style/profession_"
                 android:gravity="top"
-                />
+                android:text="@string/profession_"
+                android:textAppearance="@style/profession_" />
 
 
             <EditText
@@ -201,48 +190,119 @@
                 android:layout_width="158dp"
                 android:layout_height="28dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="216dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="216dp"
                 android:layout_marginTop="480dp"
-                android:background="@drawable/rectangle_1"
-                />
+                android:background="@drawable/rectangle_1" />
 
             <TextView
                 android:id="@+id/weighttxt"
                 android:layout_width="67dp"
                 android:layout_height="17dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="45dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="45dp"
                 android:layout_marginTop="528dp"
-                android:text="@string/weight"
-                android:textAppearance="@style/weight"
                 android:gravity="top"
-                />
+                android:text="@string/weight"
+                android:textAppearance="@style/weight" />
 
             <TextView
                 android:id="@+id/heighttxt"
                 android:layout_width="67dp"
                 android:layout_height="17dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="216dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="216dp"
                 android:layout_marginTop="528dp"
-                android:text="@string/height"
-                android:textAppearance="@style/height"
                 android:gravity="top"
-                />
+                android:text="@string/height"
+                android:textAppearance="@style/height" />
 
-            <View
+            <EditText
                 android:id="@+id/weight"
                 android:layout_width="156dp"
                 android:layout_height="28dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="43dp"
                 android:layout_alignParentTop="true"
+                android:layout_marginLeft="43dp"
                 android:layout_marginTop="552dp"
+                android:background="@drawable/rectangle_1" />
+
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="156dp"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="216dp"
+                android:layout_marginTop="552dp"
+                android:background="@drawable/rectangle_1" />
+
+            <TextView
+                android:id="@+id/any_medical_txt"
+                android:layout_width="177dp"
+                android:layout_height="17dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="47dp"
+                android:layout_marginTop="602dp"
+                android:gravity="top"
+                android:text="@string/any_medical"
+                android:textAppearance="@style/any_medical" />
+
+            <EditText
+                android:id="@+id/any_medical"
+                android:layout_width="318dp"
+                android:layout_height="56dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="43dp"
+                android:layout_marginTop="628dp"
                 android:background="@drawable/rectangle_1"
-                />
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/address_txt"
+                android:layout_width="80dp"
+                android:layout_height="23dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="47dp"
+                android:layout_marginTop="701dp"
+                android:gravity="top"
+                android:text="@string/address"
+                android:textAppearance="@style/address" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="327dp"
+                android:layout_height="90dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="724dp"
+                android:background="@drawable/rectangle_1" />
+
+            <Button android:id="@+id/save"
+            android:layout_width="87dp"
+            android:layout_height="29dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="39dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="861dp"
+            android:background="@drawable/save"/>
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="87dp"
+                android:layout_height="29dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="153dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="861dp"
+                android:background="@drawable/cancel"/>
+
         </RelativeLayout>
 
 
