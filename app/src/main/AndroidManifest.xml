@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppointmentApp">
         <activity android:name=".signup"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".User_Profile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

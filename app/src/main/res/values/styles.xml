@@ -197,4 +197,78 @@
 
     <style name="medicines">Medicine</style>
 
+    <style name="mobile_no_">mobile_no_
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #80000000
+        </item>
+
+    </style>
+
+    <style name="profession_">profession_
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #80000000
+        </item>
+
+    </style>
+
+    <style name="weight">weight
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #80000000
+        </item>
+    </style>
+
+    <style name="height">height
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #80000000
+        </item>
+    </style>
+
+    <style name="any_medical">any_medical
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #80000000
+        </item>
+
+    </style>
+
+    <style name="address">address
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #80000000
+        </item>
+    </style>
+
+    <style name="save">save
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
 </resources>
