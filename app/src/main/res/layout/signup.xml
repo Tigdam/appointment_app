@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/signupback" >
+
+    <TextView
+        android:id="@+id/register_wi"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_horizontal|top"
+        android:text="@string/register_wi"
+        android:textAppearance="@style/register_wi"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="78dp" />
+
+    <TextView
+        android:id="@+id/your_inform"
+        android:layout_width="279dp"
+        android:layout_height="31dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="152.36dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal|top"
+        android:text="@string/your_inform"
+        android:textAppearance="@style/your_inform"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="308dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="227dp"
+        android:background="@drawable/roundtxtbox"
+        android:hint="@string/full_name"
+        android:inputType="textPersonName"
+        android:paddingLeft="16dp"
+        android:textColorHint="#A8504C4C"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="34dp"
+        android:paddingStart="16dp"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="308dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="304dp"
+        android:background="@drawable/roundtxtbox"
+        android:hint="@string/email"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:textColorHint="#A8504C4C"
+        tools:ignore="RtlSymmetry,TextFields" />
+
+
+</RelativeLayout>
