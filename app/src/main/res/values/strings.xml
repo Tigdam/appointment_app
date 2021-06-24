@@ -9,6 +9,7 @@
     <string name="welcome_bac">Welcome Back ! </string>
     <string name="full_name">Full Name</string>
     <string name="email">Email</string>
+    <string name="reg_password">New password</string>
 
 
 </resources>

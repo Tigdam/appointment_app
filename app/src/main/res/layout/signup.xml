@@ -73,5 +73,20 @@
         android:textColorHint="#A8504C4C"
         tools:ignore="RtlSymmetry,TextFields" />
 
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="308dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="38dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="373dp"
+        android:background="@drawable/roundtxtbox"
+        android:hint="@string/reg_password"
+        android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:textColorHint="#A8504C4C"
+        tools:ignore="RtlSymmetry,TextFields" />
 
 </RelativeLayout>
