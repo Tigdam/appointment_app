@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_histor"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/signupback" >
+
+
+    <TextView
+        android:id="@+id/date_"
+        android:layout_width="102dp"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="108dp"
+        android:text="@string/hist_date_"
+        android:textAppearance="@style/edit_profil"
+        android:gravity="center_horizontal|top"       />
+
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="116dp"
+        android:layout_height="26dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="123dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="117dp"
+        android:text="@string/hist_date_PH"
+        android:textAppearance="@style/hist_date_PH"
+        android:gravity="center_horizontal|top"        />
+
+    <TextView
+        android:id="@+id/exercise_given"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="188dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/exercise_given"
+        android:textAppearance="@style/edit_profil" />
+
+    <LinearLayout
+        android:layout_width="303dp"
+        android:layout_height="163dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="235dp"
+        android:background="@drawable/rect"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="10dp"
+        android:padding="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/medicines"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="430dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/medicines"
+        android:textAppearance="@style/edit_profil"
+        android:layout_marginStart="51dp"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="303dp"
+        android:layout_height="163dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="471dp"
+        android:background="@drawable/rect"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="51dp"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="10dp"
+        android:padding="5dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="278dp"
+        android:layout_marginBottom="674dp"
+        app:srcCompat="@drawable/backbutton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="278dp"
+        android:layout_marginStart="25dp" />
+
+</RelativeLayout>

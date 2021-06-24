@@ -114,7 +114,7 @@
         android:layout_marginLeft="33dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="553dp"
-        android:background="@drawable/roundbtn"
+        android:background="@drawable/round_btn"
         android:text="@string/sign_up"
         android:textAppearance="@style/button"
         />

@@ -19,6 +19,13 @@
     <string name="last_name_">Last Name*</string>
     <string name="date_of_bir">Date of Birth*</string>
     <string name="gender">Gender*</string>
+    <string name="user_date">Date</string>
+    <string name="hist_date">placeholder</string>
+    <string name="exercise_give">Exercise Given</string>
+    <string name="hist_date_">Date</string>
+    <string name="hist_date_PH">placeholder</string>
+    <string name="exercise_given">Exercise Given</string>
+    <string name="medicines">Medicines</string>
 
     <string-array name="gender_array">
         <item>Male</item>

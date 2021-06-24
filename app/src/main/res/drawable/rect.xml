@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="303dp"
+    android:height="163dp"
+    android:viewportWidth="303"
+    android:viewportHeight="163"
+    >
+
+    <group>
+
+        <clip-path
+            android:pathData="M0 0H303V163H0V0Z"
+            tools:ignore="VectorRaster" />
+
+        <path
+            android:pathData="M0 0V163H303V0"
+            android:fillColor="#40C4C4C4"
+            />
+
+        <path
+            android:pathData="M0 0H303V163H0V0Z"
+            android:strokeWidth="2"
+            android:strokeColor="#2B000000"
+            />
+
+    </group>
+
+</vector>
