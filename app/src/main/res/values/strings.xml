@@ -15,6 +15,10 @@
     <string name="last_name_">Last Name*</string>
     <string name="date_of_bir">Date of Birth*</string>
     <string name="gender">Gender*</string>
+    <string name="mobile_no_">Mobile No*</string>
+    <string name="profession_">Profession/Occupation</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
 
     <string-array name="gender_array">
         <item>Male</item>
