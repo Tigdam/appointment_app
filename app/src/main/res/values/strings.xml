@@ -8,7 +8,7 @@
     <string name="dont_have_a">Dont have an account?</string>
     <string name="welcome_bac">Welcome Back ! </string>
     <string name="full_name">Full Name</string>
-    <string name="email">Email+</string>
+    <string name="email">Email*</string>
     <string name="reg_password">New password</string>
     <string name="confirm_password">Confirm password</string>
     <string name="sign_in">Sign In</string>
@@ -23,7 +23,7 @@
     <string name="profession_">Profession/Occupation</string>
     <string name="weight">Weight</string>
     <string name="height">Height</string>
-    <string name="any_medical">Any Medical Condition?</string>
+    <string name="any_medical">Any Medical History?</string>
     <string name="address">Address</string>
     <string name="save">SAVE</string>
 
