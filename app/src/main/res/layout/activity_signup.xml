@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/sign_up"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/signupback" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signupback"
+    tools:context=".signup">
 
     <TextView
         android:id="@+id/register_wi"
@@ -98,10 +98,50 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="446dp"
         android:background="@drawable/roundtxtbox"
-        android:hint="@string/"
+        android:hint="@string/confirm_password"
         android:inputType="textPassword"
         android:paddingStart="16dp"
         android:paddingLeft="16dp"
         android:textColorHint="#A8504C4C"
         tools:ignore="RtlSymmetry,TextFields" />
+
+    <Button
+        android:id="@+id/signupbtn"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="308dp"
+        android:layout_height="57dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="553dp"
+        android:background="@drawable/roundbtn"
+        android:text="@string/sign_up"
+        android:textAppearance="@style/button"
+        />
+
+    <TextView
+        android:id="@+id/already_hav"
+        android:layout_width="214dp"
+        android:layout_height="21dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="659dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/already_hav"
+        android:textAppearance="@style/already_hav" />
+
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="255dp"
+        android:layout_marginTop="659dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/sign_in"
+        android:textAppearance="@style/sign_inup" />
+
 </RelativeLayout>

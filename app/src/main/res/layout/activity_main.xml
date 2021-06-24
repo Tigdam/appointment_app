@@ -64,8 +64,8 @@
         android:layout_marginLeft="53dp"
         android:layout_marginTop="585dp"
         android:background="@drawable/roundbtn"
-        android:text="Sign In"
-        android:textAppearance="@style/sign_in"
+        android:text="@string/sign_in"
+        android:textAppearance="@style/button"
         android:textStyle="bold" />
 
     <TextView
@@ -83,8 +83,7 @@
         android:textAppearance="@style/welcome_bac"
         android:textColor="#000000"
         android:textColorHint="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/dont_have_a"
@@ -99,6 +98,18 @@
         android:textAppearance="@style/dont_have_a"
         android:textColorHint="#000000" />
 
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="74dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="256dp"
+        android:layout_marginTop="668dp"
+        android:gravity="center_horizontal|top"
+        android:text="@string/sign_up"
+        android:textAppearance="@style/sign_inup" />
+
     <ImageView
         android:id="@+id/loginpic"
         android:layout_width="196dp"
@@ -110,6 +121,7 @@
         android:layout_marginTop="115dp"
         android:background="@drawable/loginpic"
         />
+
 
 
 </RelativeLayout>
