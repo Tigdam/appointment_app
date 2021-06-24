@@ -13,10 +13,16 @@
 
     </style>
 
-    <style name="sign_in">
+    <style name="button">
 
         <item name="android:textSize">
             20sp
+        </item>
+        <item name="android:textStyle">
+            bold
+        </item>
+        <item name="android:color">
+            @color/Strong_pink
         </item>
 
         <item name="android:textColor">
@@ -67,6 +73,29 @@
 
         <item name="android:textColor">
             #A1000000
+        </item>
+
+    </style>
+
+    <style name="already_hav">
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+    </style>
+
+    <style name="sign_inup">
+
+        <item name="android:textSize">
+            18sp
+        </item>
+
+
+        <item name="android:textColor">
+            @color/Strong_pink
         </item>
 
     </style>
