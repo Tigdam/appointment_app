@@ -22,7 +22,8 @@
         android:background="@drawable/roundtxtbox"
         android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"
-        android:paddingLeft="16dp" />
+        android:paddingLeft="16dp"
+        android:textColorHint="#A8504C4C" />
 
     <EditText
         android:id="@+id/password"
@@ -36,7 +37,8 @@
         android:background="@drawable/roundtxtbox"
         android:hint="Enter your password"
         android:inputType="textPassword"
-        android:paddingLeft="16dp" />
+        android:paddingLeft="16dp"
+        android:textColorHint="#A8504C4C" />
 
     <TextView
         android:id="@+id/forgot_pass"
@@ -76,8 +78,11 @@
         android:layout_marginTop="133dp"
         android:fontFamily="@font/poppins_semibold"
         android:gravity="center_horizontal|top"
+        android:shadowColor="#00DF1616"
         android:text="@string/welcome_bac"
         android:textAppearance="@style/welcome_bac"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -87,11 +92,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="83dp"
-        android:layout_marginTop="677dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="668dp"
         android:gravity="center_horizontal|top"
         android:text="@string/dont_have_a"
-        android:textAppearance="@style/dont_have_a" />
+        android:textAppearance="@style/dont_have_a"
+        android:textColorHint="#000000" />
 
     <ImageView
         android:id="@+id/loginpic"
