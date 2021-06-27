@@ -1,18 +1,16 @@
 package com.Project.appointmentapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,7 +34,7 @@ import java.io.InputStreamReader;
 public class MainActivity extends AppCompatActivity {
 
     EditText email_txt, pass_txt;
-    Button signin_btn;
+    Button signing_btn;
     TextView forget_pass, signup_btn;
 
     String item = "admin";
@@ -60,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         forget_pass = findViewById(R.id.forgot_pass);
         signup_btn = findViewById(R.id.sign_in);
-        signin_btn = findViewById(R.id.signinbtn);
+        signing_btn = findViewById(R.id.signinbtn);
 
         mDialog = new ProgressDialog(this);
 
@@ -84,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //login 
-        signin_btn.setOnClickListener(new View.OnClickListener() {
+        signing_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
