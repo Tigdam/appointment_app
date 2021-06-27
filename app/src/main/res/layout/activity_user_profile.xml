@@ -7,39 +7,35 @@
     tools:context=".User_Profile"
     android:background="@drawable/signupback">
 
-
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_img"
-            android:layout_width="136dp"
-            android:layout_height="140dp"
-            android:layout_marginLeft="138dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="15dp"
-            android:elevation="4dp"
-            android:src="@drawable/naruto" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_img"
+                android:layout_width="136dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="138dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:elevation="4dp"
+                android:src="@drawable/naruto" />
 
-        <TextView
-            android:id="@+id/edit_profil"
-            android:layout_width="134dp"
-            android:layout_height="29dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="136dp"
-            android:layout_marginTop="189dp"
-            android:gravity="center_horizontal|top"
-            android:text="@string/edit_profil"
-            android:textAppearance="@style/edit_profil" />
-
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
+            <TextView
+                android:id="@+id/edit_profil"
+                android:layout_width="134dp"
+                android:layout_height="29dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="136dp"
+                android:layout_marginTop="189dp"
+                android:gravity="center_horizontal|top"
+                android:text="@string/edit_profil"
+                android:textAppearance="@style/edit_profil" />
 
                 <TextView
                     android:id="@+id/first_name_"
@@ -353,13 +349,11 @@
                     android:layout_marginTop="825dp"
                     android:text="Cancel" />
 
-            </ScrollView>
 
 
 
-    </RelativeLayout>
 
-
-
+        </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
