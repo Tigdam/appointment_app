@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -26,7 +27,7 @@ public class User_Profile extends AppCompatActivity {
         imageView = findViewById(R.id.profile_img);
         date_of_birth = findViewById(R.id.dob);
 
-        Spinner spinner = (Spinner) findViewById(R.id.gender_spinner);
+        Spinner spinner = findViewById(R.id.gender_spinner);
 
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -36,33 +37,36 @@ public class User_Profile extends AppCompatActivity {
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
-        date_of_birth.setOnClickListener(v -> {
+        date_of_birth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-            if (v == date_of_birth) {
-                final Calendar c = Calendar.getInstance();
-                mYear = c.get(Calendar.YEAR);
-                mMonth = c.get(Calendar.MONTH);
-                mDay = c.get(Calendar.DAY_OF_MONTH);
+                if (v == date_of_birth) {
+                    final Calendar c = Calendar.getInstance();
+                    mYear = c.get(Calendar.YEAR);
+                    mMonth = c.get(Calendar.MONTH);
+                    mDay = c.get(Calendar.DAY_OF_MONTH);
 
 
-                DatePickerDialog datePickerDialog = new DatePickerDialog(User_Profile.this,
-                        new DatePickerDialog.OnDateSetListener() {
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(User_Profile.this,
+                            new DatePickerDialog.OnDateSetListener() {
 
-                            @Override
-                            public void onDateSet(DatePicker view, int year,
-                                                  int monthOfYear, int dayOfMonth) {
+                                @Override
+                                public void onDateSet(DatePicker view, int year,
+                                                      int monthOfYear, int dayOfMonth) {
 
-                                date_of_birth.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                                    date_of_birth.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
 
-                            }
-                        }, mYear, mMonth, mDay);
-               // datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis()-1000);
-                datePickerDialog.show();
+                                }
+                            }, mYear, mMonth, mDay);
+                   // datePickerDialog.getDatePicker().setMinDate(System.currentTimeMillis()-1000);
+                    datePickerDialog.show();
+                }
+
+
+
+
             }
-
-
-
-
         });
 
     }

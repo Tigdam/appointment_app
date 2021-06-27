@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".User_dashboard"
-    android:background="@drawable/user_dashboard">
+    >
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ellipse_2"
@@ -21,6 +21,7 @@
         android:layout_marginRight="135dp"
         android:background="@drawable/ellipse_2"
         android:elevation="4dp"
-       android:src="@drawable/naruto" />
+        android:src="@drawable/naruto"
+       />
 
 </RelativeLayout>
