@@ -33,6 +33,9 @@
     <string name="any_medical">Any Medical History?</string>
     <string name="address">Address</string>
     <string name="save">SAVE</string>
+    <string name="visits">Visits</string>
+    <string name="bookappountment">Book Appointment</string>
+    <string name="chatwithdoc">Chat with out doctor</string>
 
 
     <string-array name="gender_array">

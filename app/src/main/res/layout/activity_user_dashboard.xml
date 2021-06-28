@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".User_dashboard"
+    android:background="@drawable/userdashboardback"
     >
+
+
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ellipse_2"
@@ -13,15 +16,69 @@
         android:layout_height="140dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_marginLeft="135dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="135dp"
-        android:layout_marginRight="135dp"
+        android:layout_marginTop="29dp"
         android:background="@drawable/ellipse_2"
         android:elevation="4dp"
-        android:src="@drawable/naruto"
-       />
+        android:src="@drawable/naruto" />
+
+
+    <View
+        android:id="@+id/rectangle_1"
+        android:layout_width="316dp"
+        android:layout_height="114dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="199dp"
+        android:background="@drawable/rectangle_2"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/visits"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="68dp"
+            android:layout_marginTop="217dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/visits"
+            android:textAppearance="@style/visits"
+            android:textSize="24sp" />
+    </View>
+
+    <Button
+        android:id="@+id/bookappointment"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="308dp"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="341dp"
+        android:background="@drawable/round_btn"
+        android:text="@string/bookappountment"
+        android:textAppearance="@style/button"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bookappointment2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="308dp"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="436dp"
+        android:background="@drawable/round_btn"
+        android:text="@string/chatwithdoc"
+        android:textAppearance="@style/button"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>
