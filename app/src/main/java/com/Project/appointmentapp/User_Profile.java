@@ -6,18 +6,26 @@ import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
 public class User_Profile extends AppCompatActivity {
 
     ImageView imageView;
-    EditText date_of_birth;
+    Button patSaveBtn, patCancelBtn;
+    EditText patFname, patLname, patEmail, patDOB, patGender, patMob, patProfession, patWeight, patHeight, patHistory, patAddress;
     private int mYear, mMonth, mDay;
+
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +33,18 @@ public class User_Profile extends AppCompatActivity {
         setContentView(R.layout.activity_user_profile);
 
         imageView = findViewById(R.id.profile_img);
-        date_of_birth = findViewById(R.id.dob);
+//        date_of_birth = findViewById(R.id.dob);
+        patFname=findViewById(R.id.fname);
+        patLname=findViewById(R.id.lname);
+        patEmail=findViewById(R.id.emailid);
+        patDOB=findViewById(R.id.dob);
+//        patGender=findViewById(R.id.gender_spinner);
+        patMob=findViewById(R.id.mobile);
+        patProfession=findViewById(R.id.Profession_Occupation);
+        patWeight=findViewById(R.id.weight);
+        patHeight=findViewById(R.id.height);
+        patHistory=findViewById(R.id.any_medical);
+        patAddress=findViewById(R.id.address);
 
         Spinner spinner = findViewById(R.id.gender_spinner);
 
@@ -37,11 +56,11 @@ public class User_Profile extends AppCompatActivity {
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
-        date_of_birth.setOnClickListener(new View.OnClickListener() {
+        patDOB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (v == date_of_birth) {
+                if (v == patDOB) {
                     final Calendar c = Calendar.getInstance();
                     mYear = c.get(Calendar.YEAR);
                     mMonth = c.get(Calendar.MONTH);
@@ -55,7 +74,7 @@ public class User_Profile extends AppCompatActivity {
                                 public void onDateSet(DatePicker view, int year,
                                                       int monthOfYear, int dayOfMonth) {
 
-                                    date_of_birth.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                                    patDOB.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
 
                                 }
                             }, mYear, mMonth, mDay);
@@ -69,5 +88,25 @@ public class User_Profile extends AppCompatActivity {
             }
         });
 
+        patSaveBtn.setOnClickListener(v-> {
+            rootNode=FirebaseDatabase.getInstance();
+            reference = rootNode.getReference("patients");
+
+
+            String fname=patFname.getText().toString();
+            String lname=patLname.getText().toString();
+            String email=patEmail.getText().toString();
+            String dob=patDOB.getText().toString();
+            String mob=patMob.getText().toString();
+            String prof=patProfession.getText().toString();
+            String weight=patWeight.getText().toString();
+            String height=patHeight.getText().toString();
+            String history=patHistory.getText().toString();
+            String address=patAddress.getText().toString();
+
+            UserHelperClass_patedit helperClass=new UserHelperClass_patedit(fname,lname,email, dob,mob,prof,weight,height,history,address);
+            reference.child(fname).setValue(helperClass);
+
+        });
     }
 }

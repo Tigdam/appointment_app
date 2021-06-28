@@ -9,9 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppointmentApp">
-        <activity android:name=".doctor_dashboaard"></activity>
-        <activity android:name=".admin_dashboard" />
-        <activity android:name=".User_dashboard" />
         <activity android:name=".signup" />
         <activity android:name=".User_Profile">
             <intent-filter>
