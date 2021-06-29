@@ -223,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
         if (item.equals("patient")) {
             mDialog.dismiss();
             savests("2" + userid);
-            Intent intent = new Intent(this, User_dashboard.class);
+            Intent intent = new Intent(this, user_dashboard.class);
             intent.putExtra("tid", userid);
             startActivity(intent);
             finish();
@@ -322,7 +322,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (flag.equals("3")) {
-            Intent intenttt = new Intent(MainActivity.this, User_dashboard.class);
+            Intent intenttt = new Intent(MainActivity.this, user_dashboard.class);
             intenttt.putExtra("tid", uuid);
             startActivity(intenttt);
             finish();

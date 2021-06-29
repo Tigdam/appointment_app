@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:width="411dp"
     android:height="654dp"
     android:viewportWidth="411"
-    android:viewportHeight="654"
-    >
+    android:viewportHeight="654">
 
     <group>
 

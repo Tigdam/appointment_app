@@ -18,6 +18,7 @@ public class signup extends AppCompatActivity {
     Button singup_btn;
     TextView signin;
 
+
     FirebaseDatabase rootNode;
     DatabaseReference reference;
 
@@ -58,6 +59,8 @@ public class signup extends AppCompatActivity {
             reference.child(username).setValue(helperClass);
 
 
+            Intent loginscreen = new Intent(signup.this, MainActivity.class);
+            startActivity(loginscreen);
 
 
         });

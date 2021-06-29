@@ -3,8 +3,7 @@
     android:width="308dp"
     android:height="58dp"
     android:viewportWidth="308"
-    android:viewportHeight="58"
-    >
+    android:viewportHeight="58">
 
     <group>
 
