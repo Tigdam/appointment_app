@@ -11,6 +11,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -21,8 +22,9 @@ public class User_Profile extends AppCompatActivity {
 
     ImageView imageView;
     Button patSaveBtn, patCancelBtn;
-    EditText patFname, patLname, patEmail, patDOB, patGender, patMob, patProfession, patWeight, patHeight, patHistory, patAddress;
+    EditText patFname, patLname, patEmail, patGender, patMob, patProfession, patWeight, patHeight, patHistory, patAddress;
     private int mYear, mMonth, mDay;
+    TextView patDOB;
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
@@ -88,7 +90,7 @@ public class User_Profile extends AppCompatActivity {
             }
         });
 
-        patSaveBtn.setOnClickListener(v-> {
+        /*patSaveBtn.setOnClickListener(v-> {
             rootNode=FirebaseDatabase.getInstance();
             reference = rootNode.getReference("patients");
 
@@ -107,6 +109,6 @@ public class User_Profile extends AppCompatActivity {
             UserHelperClass_patedit helperClass=new UserHelperClass_patedit(fname,lname,email, dob,mob,prof,weight,height,history,address);
             reference.child(fname).setValue(helperClass);
 
-        });
+        });*/
     }
 }

@@ -74,11 +74,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Forget Password
-        forget_pass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //forPassCustomDialog();
-            }
+        forget_pass.setOnClickListener(v -> {
+            //forPassCustomDialog();
         });
 
         //login 

@@ -1,7 +1,9 @@
 package com.Project.appointmentapp;
 
 public class UserHelperClass_signup {
+
     String  username, email, password, type;
+
     public UserHelperClass_signup() {
     }
 

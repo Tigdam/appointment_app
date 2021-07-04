@@ -28,8 +28,8 @@ public class signup extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
 
         regUsername = findViewById(R.id.username);
-        regEmail = findViewById(R.id.emailid);
-        regPassword = findViewById(R.id.password);
+        regEmail = findViewById(R.id.email);
+        regPassword = findViewById(R.id.new_password);
         conifirm_pass = findViewById(R.id.confirm_password);
 
         singup_btn = findViewById(R.id.signupbtn);
@@ -47,20 +47,31 @@ public class signup extends AppCompatActivity {
             //check password confirmation
             confirm_password();
 
-            rootNode = FirebaseDatabase.getInstance();
-            reference = rootNode.getReference("users");
+            try {
+                rootNode = FirebaseDatabase.getInstance();
+                reference = rootNode.getReference("users");
 
-            String username = regUsername.getText().toString();
-            String email = regEmail.getText().toString();
-            String password = regPassword.getText().toString();
-            String type = "patient";
+                String username = regUsername.getText().toString();
+                String email = regEmail.getText().toString();
+                String password = regPassword.getText().toString();
+                String type = "patient";
 
-            UserHelperClass_signup helperClass = new UserHelperClass_signup(username, email, password, type);
-            reference.child(username).setValue(helperClass);
+                UserHelperClass_signup helperClass = new UserHelperClass_signup(username, email, password, type);
+                reference.child(username).setValue(helperClass);
+
+                Intent loginscreen = new Intent(signup.this, MainActivity.class);
+                startActivity(loginscreen);
+
+            }
+            catch (Exception e)
+            {
+                Toast.makeText(getApplicationContext(), "Exception"+ e, Toast.LENGTH_LONG).show();
+            }
 
 
-            Intent loginscreen = new Intent(signup.this, MainActivity.class);
-            startActivity(loginscreen);
+
+
+
 
 
         });
