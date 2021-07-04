@@ -46,7 +46,7 @@ public class signup extends AppCompatActivity {
 
             //check password confirmation
             confirm_password();
-
+            Toast.makeText(getApplicationContext(), "reg done", Toast.LENGTH_LONG).show();
             try {
                 rootNode = FirebaseDatabase.getInstance();
                 reference = rootNode.getReference("users");

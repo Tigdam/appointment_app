@@ -36,6 +36,9 @@
     <string name="visits">Visits</string>
     <string name="bookappountment">Book Appointment</string>
     <string name="chatwithdoc">Chat with out doctor</string>
+    <string name="historybtn">History</string>
+    <string name="appointmentdate">Appointment On</string>
+    <string name="user_view_visit">placeholder</string>
 
 
     <string-array name="gender_array">

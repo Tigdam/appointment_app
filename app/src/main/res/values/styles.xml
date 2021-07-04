@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="forgot_pass">
 
@@ -308,4 +308,19 @@
 
     </style>
 
+    <style name="in_rect_elevation">
+
+        <item name="fontFamily">
+            @font/roboto
+        </item>
+        <item name="android:textSize">18sp
+        </item>
+        <item name="android:elevation" tools:targetApi="lollipop">
+            6dp
+        </item>
+        <item name="android:textColor">
+            @color/black
+        </item>
+
+    </style>
 </resources>
