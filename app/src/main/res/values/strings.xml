@@ -27,7 +27,7 @@
     <string name="exercise_given">Exercise Given</string>
     <string name="medicines">Medicines</string>
     <string name="mobile_no_">Mobile No*</string>
-    <string name="profession_">Profession/Occupation</string>
+    <string name="profession_">Profession</string>
     <string name="weight">Weight</string>
     <string name="height">Height</string>
     <string name="any_medical">Any Medical History?</string>
