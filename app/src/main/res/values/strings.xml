@@ -39,6 +39,20 @@
     <string name="historybtn">History</string>
     <string name="appointmentdate">Appointment On</string>
     <string name="user_view_visit">placeholder</string>
+    <string name="user_timing">09:30 pm</string>
+    <string name="user_visit_date">12-06-21</string>
+    <string name="user_name">Rugved Adwankar</string>
+    <string name="logoutbtn">Logout</string>
+    <string name="appointmenbookingheading">Appointment Booking</string>
+    <string name="date_heading">Date *</string>
+    <string name="date_abp_ib">date</string>
+    <string name="time_ubp_tv">Time *</string>
+    <string name="Morning">RadioButton</string>
+    <string name="Morning_ubp_rb">Morning</string>
+    <string name="evening_ubp_rb">Evening</string>
+    <string name="disclaimer_ubp_tv">Disclaimer: Doctor will allot time as per their Schedule.</string>
+    <string name="confirm_ubp_btn">Confirm</string>
+    <string name="Cancel">cancel_ubp_btn</string>
 
 
     <string-array name="gender_array">

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/darkbackground"
+    tools:context=".user_appointment_booking">
+
+
+    <TextView
+        android:id="@+id/ap_booking_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="71dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/appointmenbookingheading"
+        android:textAppearance="@style/heading_24sp" />
+
+    <TextView
+        android:id="@+id/time_ubp_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="51dp"
+        android:layout_marginTop="258dp"
+        android:text="@string/time_ubp_tv"
+        android:textAppearance="@style/light_thin_heading_14sp" />
+
+
+    <TextView
+        android:id="@+id/date_uab_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="187dp"
+        android:text="@string/date_heading"
+        android:textAppearance="@style/light_thin_heading_14sp" />
+
+    <EditText
+        android:id="@+id/date_uab_ib"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="184dp"
+        android:background="@drawable/roundtxtbox"
+        android:gravity="start"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:textColorHint=""
+        android:textAlignment="viewStart"
+        android:inputType="date"/>
+
+    <RadioButton
+        android:id="@+id/morning_ubp_rb"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="254dp"
+        android:layout_toEndOf="@+id/time_ubp_tv"
+        android:layout_toRightOf="@+id/time_ubp_tv"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="@string/Morning_ubp_rb" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="253dp"
+        android:layout_toEndOf="@+id/morning_ubp_rb"
+        android:layout_toRightOf="@+id/morning_ubp_rb"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:text="@string/evening_ubp_rb" />
+
+    <View
+        android:id="@+id/grey_rect_ubp"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginBottom="436dp"
+        android:background="@drawable/grey_rect" />
+
+    <TextView
+        android:id="@+id/disclaimer_ubp_tv"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/grey_rect_ubp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="354dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/disclaimer_ubp_tv"
+        android:textAppearance="@style/light_thin_heading_14sp" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="47dp"
+        android:layout_marginTop="453dp"
+        android:layout_marginEnd="264dp"
+        android:layout_marginRight="264dp"
+        android:text="@string/Cancel"
+        app:backgroundTint="@color/Strong_pink"
+        app:cornerRadius="15dp" />
+
+    <Button
+        android:id="@+id/save_ubp_"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="187dp"
+        android:layout_marginTop="452dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginRight="124dp"
+        android:text="@string/confirm_ubp_btn"
+        app:backgroundTint="@color/Strong_pink"
+        app:cornerRadius="15dp" />
+
+</RelativeLayout>

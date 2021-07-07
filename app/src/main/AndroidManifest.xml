@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppointmentApp">
+        <activity android:name=".doctor_choosing"></activity>
+        <activity android:name=".user_appointment_booking" />
         <activity android:name=".admin_dashboard" />
         <activity android:name=".doctor_dashboaard" />
         <activity android:name=".user_dashboard" />
@@ -22,9 +24,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
 
-        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
