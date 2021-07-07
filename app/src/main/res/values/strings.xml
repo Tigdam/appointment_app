@@ -29,7 +29,7 @@
     <string name="medicines">Medicines</string>
 
 
-
+<!--user dashboard-->
     <string name="save">SAVE</string>
     <string name="visits">Visits</string>
     <string name="bookappountment">Book Appointment</string>
@@ -41,6 +41,8 @@
     <string name="user_visit_date">12-06-21</string>
     <string name="user_name">Rugved Adwankar</string>
     <string name="logoutbtn">Logout</string>
+
+<!--    Appointment booking page-->
     <string name="appointmenbookingheading">Appointment Booking</string>
     <string name="date_heading">Date *</string>
     <string name="date_abp_ib">date</string>
