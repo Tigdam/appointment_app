@@ -36,19 +36,19 @@ public class User_Profile extends AppCompatActivity {
 
         imageView = findViewById(R.id.profile_img);
 //        date_of_birth = findViewById(R.id.dob);
-        patFname=findViewById(R.id.fname);
-        patLname=findViewById(R.id.lname);
-        patEmail=findViewById(R.id.emailid);
-        patDOB=findViewById(R.id.dob);
+        patFname=findViewById(R.id.pat_ep_fname);
+        patLname=findViewById(R.id.pat_ep_lname);
+        patEmail=findViewById(R.id.pat_ep_emailid);
+        patDOB=findViewById(R.id.pat_ep_dob);
 //        patGender=findViewById(R.id.gender_spinner);
-        patMob=findViewById(R.id.mobile);
-        patProfession=findViewById(R.id.Profession_Occupation);
-        patWeight=findViewById(R.id.weight);
-        patHeight=findViewById(R.id.height);
-        patHistory=findViewById(R.id.any_medical);
-        patAddress=findViewById(R.id.address);
-
-        Spinner spinner = findViewById(R.id.gender_spinner);
+        patMob=findViewById(R.id.pat_ep_mobile);
+        patProfession=findViewById(R.id.pat_ep_prof);
+        patWeight=findViewById(R.id.pat_ep_weight);
+        patHeight=findViewById(R.id.pat_ep_height);
+        patHistory=findViewById(R.id.pat_ep_medical);
+        patAddress=findViewById(R.id.pat_ep_address);
+        patSaveBtn=findViewById(R.id.save);
+        Spinner spinner = findViewById(R.id.pat_ep_gender_spinner);
 
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -90,8 +90,8 @@ public class User_Profile extends AppCompatActivity {
             }
         });
 
-        /*patSaveBtn.setOnClickListener(v-> {
-            rootNode=FirebaseDatabase.getInstance();
+        patSaveBtn.setOnClickListener(v-> {
+            /*rootNode=FirebaseDatabase.getInstance();
             reference = rootNode.getReference("patients");
 
 
@@ -107,8 +107,8 @@ public class User_Profile extends AppCompatActivity {
             String address=patAddress.getText().toString();
 
             UserHelperClass_patedit helperClass=new UserHelperClass_patedit(fname,lname,email, dob,mob,prof,weight,height,history,address);
-            reference.child(fname).setValue(helperClass);
+            reference.child(fname).setValue(helperClass);*/
 
-        });*/
+        });
     }
 }

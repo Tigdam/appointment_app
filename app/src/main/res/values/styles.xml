@@ -56,7 +56,7 @@
     <style name="register_wi">
 
         <item name="android:textSize">
-            20sp
+            25sp
         </item>
 
         <item name="android:textColor">
