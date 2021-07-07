@@ -8,17 +8,18 @@
     <string name="dont_have_a">Dont have an account?</string>
     <string name="welcome_bac">Welcome Back ! </string>
     <string name="full_name">Full Name</string>
-    <string name="email">Email*</string>
+<string name="email">Email</string>
     <string name="reg_password">New password</string>
     <string name="confirm_password">Confirm password</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
-    <string name="already_hav">Already have an account?</string>
+    <string name="account">Already have an account?</string>
+<!--    <string name="already_hav">Already have an account?</string>-->
+
     <string name="edit_profil">Edit Profile</string>
-    <string name="first_name_">First Name*</string>
-    <string name="last_name_">Last Name*</string>
-    <string name="date_of_bir">Date of Birth*</string>
-    <string name="gender">Gender*</string>
+
+
+
     <string name="user_date">Date</string>
     <string name="hist_date">placeholder</string>
     <string name="exercise_give">Exercise Given</string>
@@ -26,22 +27,55 @@
     <string name="hist_date_PH">placeholder</string>
     <string name="exercise_given">Exercise Given</string>
     <string name="medicines">Medicines</string>
-    <string name="mobile_no_">Mobile No*</string>
-    <string name="profession_">Profession</string>
-    <string name="weight">Weight</string>
-    <string name="height">Height</string>
-    <string name="any_medical">Any Medical History?</string>
-    <string name="address">Address</string>
+
+
+
     <string name="save">SAVE</string>
     <string name="visits">Visits</string>
     <string name="bookappountment">Book Appointment</string>
     <string name="chatwithdoc">Chat with out doctor</string>
+
+<!--DOCTOR EDIT PROFILE TEXTVIEW-->
+  <string name="doc_ep_qual_tv">Qualification*</string>
+
+    <string name="doc_ep_fname_tv">First Name*</string>
+    <string name="doc_ep_lname_tv">Last Name*</string>
+    <string name="doc_ep_email_tv">Email*</string>
+    <string name="doc_ep_mob_tv">Mobile No*</string>
+    <string name="doc_ep_dob_tv">Date of Birth*</string>
+    <string name="doc_ep_gender_tv">Gender*</string>
+<string name="doc_ep_exp_tv">Experience</string>
+    <string name="doc_ep_spec_tv">Speciality*</string>
+    <string name="doc_ep_avail_tv">Availability*</string>
+    <string name="doc_ep_ftime_tv">From Time*</string>
+    <string name="doc_ep_ttime_tv">To Time*</string>
+<string name="doc_ep_about_tv">About You</string>
+<string name="doc_ep_add_tv">Address</string>
+
+    <!--PATIENT EDIT PROFILE TEXTVIEW-->
+    <string name="pat_ep_fname_tv">First Name*</string>
+    <string name="pat_ep_lname_tv">Last Name*</string>
+    <string name="pat_ep_email_tv">Email*</string>
+    <string name="pat_ep_dob_tv">Date of Birth*</string>
+    <string name="pat_ep_gender_tv">Gender*</string>
+    <string name="pat_ep_mob_tv">Mobile No.*</string>
+    <string name="pat_ep_prof_tv">Profession*</string>
+
+    <string name="pat_ep_weight_tv">Weight</string>
+    <string name="pat_ep_height_tv">Height</string>
+    <string name="pat_ep_medical_tv">Any Medical History?</string>
+    <string name="pat_ep_address_tv">Address</string>
 
 
     <string-array name="gender_array">
         <item>Male</item>
         <item>Female</item>
         <item>Other</item>
+    </string-array>
+
+    <string-array name="availability_array">
+        <item>Morning</item>
+        <item>Evening</item>
     </string-array>
 
 </resources>

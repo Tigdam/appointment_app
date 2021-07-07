@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,21 +10,33 @@
     android:background="@drawable/signupback"
     tools:context=".signup">
 
+    <!--<TextView
+        android:id="@+id/register_wi"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/poppins_semibold"
+
+        android:text="@string/register_wi"
+        android:textAppearance="@style/register_wi"
+         />-->
+
     <TextView
         android:id="@+id/register_wi"
         android:layout_width="241dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="78dp"
-        android:layout_marginTop="120dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:gravity="center_horizontal|top"
         android:text="@string/register_wi"
         android:textAppearance="@style/register_wi"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="78dp" />
+        android:fontFamily="@font/poppins_semibold"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="115dp"
+        android:gravity="center"
+        android:layout_marginLeft="65dp"
 
+        />
     <TextView
         android:id="@+id/your_inform"
         android:layout_width="279dp"
@@ -41,7 +54,7 @@
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="308dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
 
         android:layout_alignParentTop="true"
@@ -68,6 +81,7 @@
         android:layout_marginStart="38dp"
         android:layout_marginLeft="38dp"
         android:layout_marginTop="304dp"
+
         android:background="@drawable/roundtxtbox"
         android:hint="@string/email"
         android:inputType="textPersonName"
@@ -133,7 +147,7 @@
         android:layout_marginLeft="53dp"
         android:layout_marginTop="659dp"
         android:gravity="center_horizontal|top"
-        android:text="@string/already_hav"
+        android:text="@string/account"
         android:textAppearance="@style/already_hav" />
 
     <TextView
