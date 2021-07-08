@@ -43,16 +43,16 @@ public class signup extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        regUsername = findViewById(R.id.username);
-        regEmail = findViewById(R.id.email);
-        regPassword = findViewById(R.id.new_password);
-        conifirm_pass = findViewById(R.id.confirm_password);
+        regUsername = findViewById(R.id.pat_reg_username);
+        regEmail = findViewById(R.id.pat_reg_email);
+        regPassword = findViewById(R.id.pat_reg_pass);
+        conifirm_pass = findViewById(R.id.pat_reg_cpass);
 
         progressBar = findViewById(R.id.progressBar);
 
-        singup_btn = findViewById(R.id.signupbtn);
+        singup_btn = findViewById(R.id.pat_reg_submit);
 
-        signin = findViewById(R.id.sign_in);
+        signin = findViewById(R.id.pat_reg_signin);
 
         mAuth = FirebaseAuth.getInstance();
 
