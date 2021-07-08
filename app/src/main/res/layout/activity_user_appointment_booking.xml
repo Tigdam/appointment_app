@@ -55,7 +55,6 @@
         android:gravity="start"
         android:paddingStart="16dp"
         android:paddingLeft="16dp"
-        android:textColorHint=""
         android:textAlignment="viewStart"
         android:inputType="date"/>
 
