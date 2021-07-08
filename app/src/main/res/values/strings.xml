@@ -8,16 +8,15 @@
     <string name="dont_have_a">Dont have an account?</string>
     <string name="welcome_bac">Welcome Back ! </string>
     <string name="full_name">Full Name</string>
-<string name="email">Email</string>
+    <string name="email">Email</string>
     <string name="reg_password">New password</string>
     <string name="confirm_password">Confirm password</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="account">Already have an account?</string>
-<!--    <string name="already_hav">Already have an account?</string>-->
+    <!--    <string name="already_hav">Already have an account?</string>-->
 
     <string name="edit_profil">Edit Profile</string>
-
 
 
     <string name="user_date">Date</string>
@@ -29,7 +28,7 @@
     <string name="medicines">Medicines</string>
 
 
-<!--user dashboard-->
+    <!--user dashboard-->
     <string name="save">SAVE</string>
     <string name="visits">Visits</string>
     <string name="bookappountment">Book Appointment</string>
@@ -42,7 +41,7 @@
     <string name="user_name">Rugved Adwankar</string>
     <string name="logoutbtn">Logout</string>
 
-<!--    Appointment booking page-->
+    <!--    Appointment booking page-->
     <string name="appointmenbookingheading">Appointment Booking</string>
     <string name="date_heading">Date *</string>
     <string name="date_abp_ib">date</string>
@@ -54,8 +53,8 @@
     <string name="confirm_ubp_btn">Confirm</string>
     <string name="Cancel">cancel_ubp_btn</string>
 
-<!--DOCTOR EDIT PROFILE TEXTVIEW-->
-  <string name="doc_ep_qual_tv">Qualification*</string>
+    <!--DOCTOR EDIT PROFILE TEXTVIEW-->
+    <string name="doc_ep_qual_tv">Qualification*</string>
 
     <string name="doc_ep_fname_tv">First Name*</string>
     <string name="doc_ep_lname_tv">Last Name*</string>
@@ -63,13 +62,13 @@
     <string name="doc_ep_mob_tv">Mobile No*</string>
     <string name="doc_ep_dob_tv">Date of Birth*</string>
     <string name="doc_ep_gender_tv">Gender*</string>
-<string name="doc_ep_exp_tv">Experience</string>
+    <string name="doc_ep_exp_tv">Experience</string>
     <string name="doc_ep_spec_tv">Speciality*</string>
     <string name="doc_ep_avail_tv">Availability*</string>
     <string name="doc_ep_ftime_tv">From Time*</string>
     <string name="doc_ep_ttime_tv">To Time*</string>
-<string name="doc_ep_about_tv">About You</string>
-<string name="doc_ep_add_tv">Address</string>
+    <string name="doc_ep_about_tv">About You</string>
+    <string name="doc_ep_add_tv">Address</string>
 
     <!--PATIENT EDIT PROFILE TEXTVIEW-->
     <string name="pat_ep_fname_tv">First Name*</string>
