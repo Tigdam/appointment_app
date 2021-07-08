@@ -13,6 +13,18 @@
 
     </style>
 
+    <style name="doc_log">
+
+        <item name="android:textSize">
+            18sp
+        </item>
+
+        <item name="android:textColor">
+            #C9246D
+        </item>
+
+    </style>
+
     <style name="button">
 
         <item name="android:textSize">
@@ -53,10 +65,10 @@
         </item>
 
     </style>
-    <style name="register_wi">
+    <style name="pat_reg">
 
         <item name="android:textSize">
-            25sp
+            30sp
         </item>
 
         <item name="android:textColor">
@@ -65,7 +77,7 @@
 
     </style>
 
-    <style name="your_inform">
+    <style name="pat_re_info">
 
         <item name="android:textSize">
             15sp
@@ -77,7 +89,7 @@
 
     </style>
 
-    <style name="already_hav">
+    <style name="hvact">
         <item name="android:textSize">
             18sp
         </item>
@@ -87,7 +99,20 @@
         </item>
     </style>
 
-    <style name="sign_inup">
+    <style name="pat_reg_signin">
+
+        <item name="android:textSize">
+            18sp
+        </item>
+
+
+        <item name="android:textColor">
+            @color/Strong_pink
+        </item>
+
+    </style>
+
+    <style name="pat_log_signup">
 
         <item name="android:textSize">
             18sp

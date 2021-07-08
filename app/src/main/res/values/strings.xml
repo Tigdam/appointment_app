@@ -1,24 +1,43 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Appointment App</string>
-    <string name="register_wi">Register With Us!</string>
+
     <string name="forgot_pass">forgot_pass</string>
     <string name="forgot_password">Forgot password?</string>
-    <string name="enter_your_email">Enter your email</string>
-    <string name="your_inform">Your Information is safe with us</string>
+
     <string name="dont_have_a">Dont have an account?</string>
     <string name="welcome_bac">Welcome Back ! </string>
-    <string name="full_name">Full Name</string>
-    <string name="email">Email</string>
-    <string name="reg_password">New password</string>
-    <string name="confirm_password">Confirm password</string>
-    <string name="sign_in">Sign In</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="account">Already have an account?</string>
+    <string name="hvact">Already have an account?</string>
+    <string name="doc_log">I am a Doctor!!</string>
+
+
     <!--    <string name="already_hav">Already have an account?</string>-->
 
+    <!--Customer Register-->
+    <string name="pat_reg">Register With Us!</string>
+    <string name="pat_re_info">Your Information is safe with us</string>
+    <string name="pat_reg_username">Full Name</string>
+    <string name="pat_reg_email">Email</string>
+    <string name="pat_reg_pass">New password</string>
+    <string name="pat_reg_cpass">Confirm password</string>
+    <string name="pat_reg_signin">Sign In</string>
+    <string name="pat_reg_submit">Sign Up</string>
+
+
+    <!--Customer Login-->
+    <string name="pat_log_signup">Sign Up</string>
+    <string name="pat_log_submit">Sign In</string>
+    <string name="pat_log_email">Enter your email</string>
+    <string name="pat_log_pass">Enter your password</string>
+    <string name="pat_log_fpass">Forgot password?</string>
+
+    <!--Doctor Login-->
+    <string name="doc_log_signup">Sign Up</string>
+    <string name="doc_log_submit">Sign In</string>
+    <string name="doc_log_email">Enter your email</string>
+    <string name="doc_log_pass">Enter your password</string>
+    <string name="doc_log_fpass">Forgot password?</string>
+
     <string name="edit_profil">Edit Profile</string>
-
-
     <string name="user_date">Date</string>
     <string name="hist_date">placeholder</string>
     <string name="exercise_give">Exercise Given</string>

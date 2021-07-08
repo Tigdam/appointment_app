@@ -10,157 +10,139 @@
     android:background="@drawable/signupback"
     tools:context=".signup">
 
-    <!--<TextView
-        android:id="@+id/register_wi"
-        android:layout_width="241dp"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentTop="true"
-
-        android:layout_marginTop="120dp"
-        android:fontFamily="@font/poppins_semibold"
-
-        android:text="@string/register_wi"
-        android:textAppearance="@style/register_wi"
-         />-->
 
     <TextView
-        android:id="@+id/register_wi"
-        android:layout_width="241dp"
+        android:id="@+id/pat_reg"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/register_wi"
-        android:textAppearance="@style/register_wi"
-        android:fontFamily="@font/poppins_semibold"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="115dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/poppins_semibold"
         android:gravity="center"
-        android:layout_marginLeft="65dp"
-
-        />
+        android:layout_centerInParent="true"
+        android:text="@string/pat_reg"
+        android:textAppearance="@style/pat_reg" />
     <TextView
-        android:id="@+id/your_inform"
-        android:layout_width="279dp"
+        android:id="@+id/pat_re_info"
+        android:layout_width="match_parent"
         android:layout_height="31dp"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="152.36dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/poppins"
-        android:gravity="center_horizontal|top"
-        android:text="@string/your_inform"
-        android:textAppearance="@style/your_inform"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="50dp" />
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="@string/pat_re_info"
+        android:textAppearance="@style/pat_re_info" />
 
     <EditText
-        android:id="@+id/username"
-        android:layout_width="300dp"
+        android:id="@+id/pat_reg_username"
+        android:layout_width="308dp"
         android:layout_height="45dp"
-
         android:layout_alignParentTop="true"
         android:gravity="center"
         android:layout_centerInParent="true"
         android:textAlignment="viewStart"
         android:paddingStart="16dp"
-        android:layout_marginTop="234dp"
+        android:layout_marginTop="180dp"
         android:background="@drawable/roundtxtbox"
-        android:hint="@string/full_name"
+        android:hint="@string/pat_reg_username"
         android:inputType="textPersonName"
-
         android:textColorHint="#A8504C4C"
-        tools:ignore="RtlCompat,RtlSymmetry"
-        android:layout_below="@+id/email"/>
+        tools:ignore="RtlCompat,RtlSymmetry"/>
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/pat_reg_email"
         android:layout_width="308dp"
         android:layout_height="45dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="304dp"
-
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textAlignment="viewStart"
+        android:paddingStart="16dp"
+        android:layout_marginTop="250dp"
         android:background="@drawable/roundtxtbox"
-        android:hint="@string/email"
+        android:hint="@string/pat_reg_email"
         android:inputType="textPersonName"
-        android:paddingStart="16dp"
-        android:paddingLeft="16dp"
         android:textColorHint="#A8504C4C"
-        tools:ignore="RtlSymmetry,TextFields"
-        />
+        tools:ignore="RtlCompat,RtlSymmetry" />
 
     <EditText
-        android:id="@+id/new_password"
+        android:id="@+id/pat_reg_pass"
         android:layout_width="308dp"
         android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="38dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="373dp"
-        android:background="@drawable/roundtxtbox"
-        android:hint="@string/reg_password"
-        android:inputType="textPassword"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textAlignment="viewStart"
         android:paddingStart="16dp"
-        android:paddingLeft="16dp"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/roundtxtbox"
+        android:hint="@string/pat_reg_pass"
+        android:inputType="textPersonName"
         android:textColorHint="#A8504C4C"
-        tools:ignore="RtlSymmetry,TextFields" />
+        tools:ignore="RtlCompat,RtlSymmetry" />
 
     <EditText
-        android:id="@+id/confirm_password"
+        android:id="@+id/pat_reg_cpass"
         android:layout_width="308dp"
         android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="38dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="446dp"
-        android:background="@drawable/roundtxtbox"
-        android:hint="@string/confirm_password"
-        android:inputType="textPassword"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textAlignment="viewStart"
         android:paddingStart="16dp"
-        android:paddingLeft="16dp"
+        android:layout_marginTop="390dp"
+        android:background="@drawable/roundtxtbox"
+        android:hint="@string/pat_reg_cpass"
+        android:inputType="textPersonName"
         android:textColorHint="#A8504C4C"
-        tools:ignore="RtlSymmetry,TextFields" />
+        tools:ignore="RtlCompat,RtlSymmetry" />
 
     <Button
-        android:id="@+id/signupbtn"
+        android:id="@+id/pat_reg_submit"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="308dp"
-        android:layout_height="57dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="33dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="553dp"
+        android:layout_marginTop="480dp"
         android:background="@drawable/round_btn"
-        android:text="@string/sign_up"
-        android:textAppearance="@style/button"
-        />
+        android:text="@string/pat_reg_submit"
+        android:textAppearance="@style/button" />
 
     <TextView
-        android:id="@+id/already_hav"
+        android:id="@+id/hvact"
         android:layout_width="214dp"
         android:layout_height="21dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="53dp"
-        android:layout_marginLeft="53dp"
-        android:layout_marginTop="659dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="570dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginRight="140dp"
         android:gravity="center_horizontal|top"
-        android:text="@string/account"
-        android:textAppearance="@style/already_hav" />
+        android:text="@string/hvact"
+        android:textAppearance="@style/hvact" />
 
     <TextView
-        android:id="@+id/sign_in"
-        android:layout_width="74dp"
+        android:id="@+id/pat_reg_signin"
+        android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="255dp"
-        android:layout_marginTop="659dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="295dp"
+        android:layout_marginTop="570dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
         android:gravity="center_horizontal|top"
-        android:text="@string/sign_in"
-        android:textAppearance="@style/sign_inup" />
+        android:text="@string/pat_reg_signin"
+        android:textAppearance="@style/pat_reg_signin" />
 
     <ProgressBar
         android:layout_width="wrap_content"
