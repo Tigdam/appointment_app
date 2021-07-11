@@ -72,7 +72,8 @@
         android:gravity="center"
         android:paddingStart="16dp"
         android:paddingLeft="16dp"
-        android:text="@string/Morning_ubp_rb" />
+        android:text="@string/Morning_ubp_rb"
+        tools:ignore="RtlSymmetry" />
 
     <RadioButton
         android:id="@+id/radioButton2"
