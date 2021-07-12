@@ -38,7 +38,7 @@
         android:textSize="18sp" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/ellipse_2"
+        android:id="@+id/pat_profile_pic"
         android:layout_width="136dp"
         android:layout_height="140dp"
         android:layout_alignParentLeft="true"

@@ -1,8 +1,16 @@
 package com.Project.appointmentapp;
 
 public class UserHelperClass_patedit {
-    String fname,lname,email, dob,mob,prof,weight,height,history,address;
+    String fname,lname,email, dob,mob,prof,weight,height,history,address, ui;
     public UserHelperClass_patedit() {
+    }
+
+    public String getUi() {
+        return ui;
+    }
+
+    public void setUi(String ui) {
+        this.ui = ui;
     }
 
     public String getFname() {
@@ -85,7 +93,7 @@ public class UserHelperClass_patedit {
         this.address = address;
     }
 
-    public UserHelperClass_patedit(String fname, String lname, String email, String dob, String mob, String prof, String weight, String height, String history, String address) {
+    public UserHelperClass_patedit(String ui, String fname, String lname, String email, String dob, String mob, String prof, String weight, String height, String history, String address) {
         this.fname = fname;
         this.lname = lname;
         this.email = email;
@@ -96,5 +104,6 @@ public class UserHelperClass_patedit {
         this.height = height;
         this.history = history;
         this.address = address;
+        this.ui = ui;
     }
 }

@@ -3,6 +3,7 @@ package com.Project.appointmentapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -13,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -20,9 +23,13 @@ import java.util.Calendar;
 
 public class User_Profile extends AppCompatActivity {
 
+    FirebaseUser user;
+
+    String userID;
+
     ImageView imageView;
-    Button patSaveBtn, patCancelBtn;
-    EditText patFname, patLname, patEmail, patGender, patMob, patProfession, patWeight, patHeight, patHistory, patAddress;
+    Button patSaveBtn;
+    EditText patFname, patLname, patEmail, patMob, patProfession, patWeight, patHeight, patHistory, patAddress;
     private int mYear, mMonth, mDay;
     TextView patDOB;
 
@@ -58,6 +65,10 @@ public class User_Profile extends AppCompatActivity {
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
+        imageView.setOnClickListener(v -> {
+            startActivity(new Intent(User_Profile.this, testing.class));
+        });
+
         patDOB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,11 +101,15 @@ public class User_Profile extends AppCompatActivity {
             }
         });
 
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("Users");
+        userID = user.getUid();
+
         patSaveBtn.setOnClickListener(v-> {
-            /*rootNode=FirebaseDatabase.getInstance();
-            reference = rootNode.getReference("patients");
 
-
+            rootNode=FirebaseDatabase.getInstance();
+            reference = rootNode.getReference("Patient_deatails");
+            String uid = userID;
             String fname=patFname.getText().toString();
             String lname=patLname.getText().toString();
             String email=patEmail.getText().toString();
@@ -106,8 +121,8 @@ public class User_Profile extends AppCompatActivity {
             String history=patHistory.getText().toString();
             String address=patAddress.getText().toString();
 
-            UserHelperClass_patedit helperClass=new UserHelperClass_patedit(fname,lname,email, dob,mob,prof,weight,height,history,address);
-            reference.child(fname).setValue(helperClass);*/
+            UserHelperClass_patedit helperClass=new UserHelperClass_patedit(uid,fname,lname,email, dob,mob,prof,weight,height,history,address);
+            reference.child(uid).setValue(helperClass);
 
         });
     }

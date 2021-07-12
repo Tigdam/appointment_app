@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText editTextEmail, editTextPassword;
     Button signin;
-    TextView forgotpassword;
+    TextView forgotpassword,sigupbtn;
 
     FirebaseAuth mAuth;
 
@@ -51,8 +51,13 @@ public class MainActivity extends AppCompatActivity {
         editTextEmail = findViewById(R.id.pat_log_email);
         editTextPassword = findViewById(R.id.pat_log_pass);
         forgotpassword = findViewById(R.id.pat_log_fpass);
+        sigupbtn = findViewById(R.id.pat_log_signup);
 
         signin = findViewById(R.id.pat_log_submit);
+
+        sigupbtn.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, signup.class));
+        });
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -87,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                     if(task.isSuccessful()){
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-                        assert user != null;
+                        /*assert user != null;
                         if(user.isEmailVerified())
                         {
                             startActivity(new Intent(MainActivity.this, user_dashboard.class));
@@ -96,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
                         {
                             user.isEmailVerified();
                             Toast.makeText(MainActivity.this, "Check your email to verify your email", Toast.LENGTH_SHORT).show();
-                        }
-
+                        }*/
+                        startActivity(new Intent(MainActivity.this, user_dashboard.class));
 
                     }
                     else {

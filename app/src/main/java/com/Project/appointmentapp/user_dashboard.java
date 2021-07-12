@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class user_dashboard extends AppCompatActivity {
     String userID;
 
     TextView logout;
+    ImageView imageView;
 
 
     @Override
@@ -35,6 +37,12 @@ public class user_dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_user_dashboard);
 
         logout = findViewById(R.id.logoutbtn);
+        imageView = findViewById(R.id.pat_profile_pic);
+
+        imageView.setOnClickListener(v -> {
+            startActivity(new Intent(user_dashboard.this, User_Profile.class));
+
+        });
 
         logout.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
