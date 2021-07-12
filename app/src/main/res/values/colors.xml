@@ -14,5 +14,7 @@
     <color name="colorBackground">@android:color/transparent</color>
     <color name="colorBackgroundDefault">#fafafa</color>
     <color name="colorTintedBackground">#cdcdcd</color>
+    <color name="deepblue">#005B84</color>
+    <color name="gray">#404040</color>
 
 </resources>

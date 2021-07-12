@@ -4,13 +4,38 @@
     <string name="forgot_pass">forgot_pass</string>
     <string name="forgot_password">Forgot password?</string>
 
-    <string name="dont_have_a">Dont have an account?</string>
+    <string name="dont_have_a" tools:ignore="StringEscaping">Don't have an account?</string>
     <string name="welcome_bac">Welcome Back ! </string>
     <string name="hvact">Already have an account?</string>
     <string name="doc_log">I am a Doctor!!</string>
 
 
     <!--    <string name="already_hav">Already have an account?</string>-->
+
+    <!--Admin patient History-->
+  <string name="user_age_tv">Age:</string>
+  <string name="user_dob_tv">DOB:</string>
+  <string name="user_age">29 Yrs</string>
+  <string name="user_email">rugved.adwankar98@gmail.com</string>
+  <string name="user_visits">Visited: </string>
+  <string name="user_visit">10 </string>
+  <string name="user_dob">12-06-1998</string>
+  <string name="user_gender_tv">Gender: </string>
+  <string name="user_gender">Female </string>
+  <string name="user_weight_tv"> Weight:</string>
+  <string name="user_weight">170kg </string>
+  <string name="user_height_tv"> Height: </string>
+  <string name="user_height">170cm </string>
+  <string name="user_mob_tv"> Mobile No.: </string>
+  <string name="user_mob">9821657632</string>
+  <string name="user_medhis_tv">Medical History: </string>
+  <string name="user_medhis">Diabetese, BP, stiffness,bald, backache, migrane</string>
+  <string name="user_occu_tv">Occupation: </string>
+  <string name="user_occu">Software Developer</string>
+  <string name="user_add_tv">Address: </string>
+  <string name="user_add">425, Mohna palace, this section, random road, goa-420 132</string>
+
+
 
     <!--Customer Register-->
     <string name="pat_reg">Register With Us!</string>
@@ -90,7 +115,7 @@
     <string name="doc_ep_add_tv">Address</string>
 
     <!--PATIENT EDIT PROFILE TEXTVIEW-->
-    <string name="pat_ep_fname_tv">First Name*</string>
+    <string name="pat_ep_fname_tv">Full Name*</string>
     <string name="pat_ep_lname_tv">Last Name*</string>
     <string name="pat_ep_email_tv">Email*</string>
     <string name="pat_ep_dob_tv">Date of Birth*</string>

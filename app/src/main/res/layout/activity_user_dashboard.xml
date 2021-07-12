@@ -8,7 +8,6 @@
     android:background="@drawable/userdashboardback"
     >
 
-
     <TextView
         android:id="@+id/logoutbtn"
         android:layout_width="wrap_content"
@@ -18,7 +17,8 @@
         android:layout_marginLeft="338dp"
         android:layout_marginTop="10dp"
         android:elevation="6dp"
-        android:gravity="center_horizontal|top"
+        android:gravity="right"
+        android:layout_centerInParent="true"
         android:text="@string/logoutbtn"
         android:textAppearance="@style/in_rect_elevation"
         android:textSize="18sp" />
