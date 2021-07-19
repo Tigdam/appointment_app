@@ -15,7 +15,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.jetbrains.annotations.NotNull;
 
 public class testing extends AppCompatActivity {
 
@@ -47,7 +46,7 @@ public class testing extends AppCompatActivity {
 
         reference.child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UserHelperClass_patedit testingpage = snapshot.getValue(UserHelperClass_patedit.class);
 
                 if(testingpage != null)
@@ -64,7 +63,7 @@ public class testing extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+            public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(testing.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
             }
         });

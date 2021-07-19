@@ -153,30 +153,7 @@ android:layout_alignParentLeft="true"
         android:background="@drawable/rect_name2"
         />
 
-    <TextView
-        android:id="@+id/user_gender_tv"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="280dp"
-        android:elevation="6dp"
-        android:text="@string/user_gender_tv"
-        android:textAppearance="@style/pat_data"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="20dp"
-        android:gravity="top" />
 
-    <TextView
-        android:id="@+id/user_gender"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="280dp"
-        android:elevation="6dp"
-        android:text="@string/user_gender"
-        android:textAppearance="@style/pat_data1"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:layout_toRightOf="@id/user_gender_tv"
-        android:gravity="top" />
 
     <TextView
         android:id="@+id/user_weight_tv"
@@ -187,7 +164,8 @@ android:layout_alignParentLeft="true"
         android:textAppearance="@style/pat_data"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
-        android:layout_toRightOf="@+id/user_gender"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
         android:gravity="top" />
 
     <TextView
@@ -209,8 +187,10 @@ android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="280dp"
         android:layout_toRightOf="@id/user_weight"
+
         android:elevation="6dp"
         android:gravity="top"
+        android:layout_marginLeft="20dp"
         android:text="@string/user_height_tv"
         android:textAppearance="@style/pat_data" />
 
@@ -249,6 +229,31 @@ android:layout_alignParentLeft="true"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_toRightOf="@id/user_mob_tv"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/user_gender_tv"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="320dp"
+        android:elevation="6dp"
+        android:text="@string/user_gender_tv"
+        android:textAppearance="@style/pat_data"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@+id/user_mob"
+        android:layout_marginLeft="20dp"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/user_gender"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="320dp"
+        android:elevation="6dp"
+        android:text="@string/user_gender"
+        android:textAppearance="@style/pat_data1"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_toRightOf="@id/user_gender_tv"
         android:gravity="top" />
 
     <TextView

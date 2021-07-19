@@ -4,7 +4,7 @@
     <string name="forgot_pass">forgot_pass</string>
     <string name="forgot_password">Forgot password?</string>
 
-    <string name="dont_have_a" tools:ignore="StringEscaping">Don't have an account?</string>
+    <string name="dont_have_a" >Do not have an account?</string>
     <string name="welcome_bac">Welcome Back ! </string>
     <string name="hvact">Already have an account?</string>
     <string name="doc_log">I am a Doctor!!</string>
@@ -22,7 +22,7 @@
   <string name="user_dob">12-06-1998</string>
   <string name="user_gender_tv">Gender: </string>
   <string name="user_gender">Female </string>
-  <string name="user_weight_tv"> Weight:</string>
+  <string name="user_weight_tv"> Weight: </string>
   <string name="user_weight">170kg </string>
   <string name="user_height_tv"> Height: </string>
   <string name="user_height">170cm </string>

@@ -20,7 +20,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 import java.util.regex.Pattern;
@@ -98,7 +97,7 @@ public class signup extends AppCompatActivity {
             mAuth.createUserWithEmailAndPassword(email,password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
-                        public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
+                        public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 UserHelperClass_signup userHelperClass_signup = new UserHelperClass_signup(fullName, email, password);
 
@@ -106,7 +105,7 @@ public class signup extends AppCompatActivity {
                                         .child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
                                         .setValue(userHelperClass_signup).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
-                                    public void onComplete(@NonNull @NotNull Task<Void> task) {
+                                    public void onComplete(@NonNull Task<Void> task) {
                                         if(task.isSuccessful()){
                                             Toast.makeText(signup.this, "User has been registered successfully", Toast.LENGTH_SHORT).show();
                                             progressBar.setVisibility(View.GONE);

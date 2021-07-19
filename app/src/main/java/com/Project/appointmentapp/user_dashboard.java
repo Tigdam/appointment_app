@@ -18,7 +18,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import org.jetbrains.annotations.NotNull;
 
 public class user_dashboard extends AppCompatActivity {
 
@@ -57,7 +56,7 @@ public class user_dashboard extends AppCompatActivity {
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UserHelperClass_signup userProfile = snapshot.getValue(UserHelperClass_signup.class);
 
                 if(userProfile != null)
@@ -69,7 +68,7 @@ public class user_dashboard extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+            public void onCancelled(@NonNull  DatabaseError error) {
                 Toast.makeText(user_dashboard.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
             }
         });
