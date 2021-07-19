@@ -116,7 +116,6 @@
 
     <!--PATIENT EDIT PROFILE TEXTVIEW-->
     <string name="pat_ep_fname_tv">Full Name*</string>
-    <string name="pat_ep_lname_tv">Last Name*</string>
     <string name="pat_ep_email_tv">Email*</string>
     <string name="pat_ep_dob_tv">Date of Birth*</string>
     <string name="pat_ep_gender_tv">Gender*</string>

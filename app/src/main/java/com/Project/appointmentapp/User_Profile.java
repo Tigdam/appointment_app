@@ -31,6 +31,7 @@ public class User_Profile extends AppCompatActivity {
     Button patSaveBtn;
     EditText patFname, patLname, patEmail, patMob, patProfession, patWeight, patHeight, patHistory, patAddress;
     private int mYear, mMonth, mDay;
+    Spinner patGender;
     TextView patDOB;
 
     FirebaseDatabase rootNode;
@@ -43,11 +44,10 @@ public class User_Profile extends AppCompatActivity {
 
         imageView = findViewById(R.id.profile_img);
 //        date_of_birth = findViewById(R.id.dob);
-        patFname=findViewById(R.id.pat_ep_fname);
-        patLname=findViewById(R.id.pat_ep_lname);
+        patFname=findViewById(R.id.pat_ep_fullname);
         patEmail=findViewById(R.id.pat_ep_emailid);
         patDOB=findViewById(R.id.pat_ep_dob);
-//        patGender=findViewById(R.id.gender_spinner);
+        patGender=findViewById(R.id.pat_ep_gender_spinner);
         patMob=findViewById(R.id.pat_ep_mobile);
         patProfession=findViewById(R.id.pat_ep_prof);
         patWeight=findViewById(R.id.pat_ep_weight);
@@ -55,7 +55,7 @@ public class User_Profile extends AppCompatActivity {
         patHistory=findViewById(R.id.pat_ep_medical);
         patAddress=findViewById(R.id.pat_ep_address);
         patSaveBtn=findViewById(R.id.save);
-        Spinner spinner = findViewById(R.id.pat_ep_gender_spinner);
+
 
 // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -63,7 +63,7 @@ public class User_Profile extends AppCompatActivity {
 // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+        patGender.setAdapter(adapter);
 
         imageView.setOnClickListener(v -> {
             startActivity(new Intent(User_Profile.this, testing.class));
@@ -110,18 +110,18 @@ public class User_Profile extends AppCompatActivity {
             rootNode=FirebaseDatabase.getInstance();
             reference = rootNode.getReference("Patient_deatails");
             String uid = userID;
-            String fname=patFname.getText().toString();
-            String lname=patLname.getText().toString();
-            String email=patEmail.getText().toString();
-            String dob=patDOB.getText().toString();
-            String mob=patMob.getText().toString();
-            String prof=patProfession.getText().toString();
-            String weight=patWeight.getText().toString();
-            String height=patHeight.getText().toString();
-            String history=patHistory.getText().toString();
-            String address=patAddress.getText().toString();
+            String fname = patFname.getText().toString();
+            String email = patEmail.getText().toString();
+            String dob = patDOB.getText().toString();
+            String mob = patMob.getText().toString();
+            String gen = patGender.toString();
+            String prof = patProfession.getText().toString();
+            String weight = patWeight.getText().toString();
+            String height = patHeight.getText().toString();
+            String history = patHistory.getText().toString();
+            String address = patAddress.getText().toString();
 
-            UserHelperClass_patedit helperClass=new UserHelperClass_patedit(uid,fname,lname,email, dob,mob,prof,weight,height,history,address);
+            UserHelperClass_patedit helperClass = new UserHelperClass_patedit(uid,fname,email, dob,mob,gen,prof,weight,height,history,address);
             reference.child(uid).setValue(helperClass);
 
         });

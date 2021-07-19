@@ -1,16 +1,9 @@
 package com.Project.appointmentapp;
 
 public class UserHelperClass_patedit {
-    String fname,lname,email, dob,mob,prof,weight,height,history,address, ui;
+    String fname,email, dob,mob,gen,prof,weight,height,history,address, ui;
+
     public UserHelperClass_patedit() {
-    }
-
-    public String getUi() {
-        return ui;
-    }
-
-    public void setUi(String ui) {
-        this.ui = ui;
     }
 
     public String getFname() {
@@ -21,13 +14,7 @@ public class UserHelperClass_patedit {
         this.fname = fname;
     }
 
-    public String getLname() {
-        return lname;
-    }
 
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
 
     public String getEmail() {
         return email;
@@ -51,6 +38,14 @@ public class UserHelperClass_patedit {
 
     public void setMob(String mob) {
         this.mob = mob;
+    }
+
+    public String getGen() {
+        return gen;
+    }
+
+    public void setGen(String gen) {
+        this.gen = gen;
     }
 
     public String getProf() {
@@ -93,12 +88,20 @@ public class UserHelperClass_patedit {
         this.address = address;
     }
 
-    public UserHelperClass_patedit(String ui, String fname, String lname, String email, String dob, String mob, String prof, String weight, String height, String history, String address) {
+    public String getUi() {
+        return ui;
+    }
+
+    public void setUi(String ui) {
+        this.ui = ui;
+    }
+
+    public UserHelperClass_patedit(String fname, String email, String dob, String mob, String gen, String prof, String weight, String height, String history, String address, String ui) {
         this.fname = fname;
-        this.lname = lname;
         this.email = email;
         this.dob = dob;
         this.mob = mob;
+        this.gen = gen;
         this.prof = prof;
         this.weight = weight;
         this.height = height;
