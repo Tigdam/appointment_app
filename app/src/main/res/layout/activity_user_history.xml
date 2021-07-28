@@ -15,9 +15,10 @@
     <TextView
         android:id="@+id/date_"
         android:layout_width="102dp"
-        android:layout_height="29dp"
+        android:layout_height="30dp"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="36dp"
+        android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="108dp"
         android:text="@string/hist_date_"
@@ -27,11 +28,12 @@
     <TextView
         android:id="@+id/some_id"
         android:layout_width="116dp"
-        android:layout_height="26dp"
+        android:layout_height="25dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="123dp"
+        android:layout_marginLeft="125dp"
+        android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="117dp"
+        android:layout_marginTop="112dp"
         android:text="@string/hist_date_PH"
         android:textAppearance="@style/hist_date_PH"
         android:gravity="center_horizontal|top"        />
@@ -42,9 +44,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="51dp"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="188dp"
-        android:gravity="center_horizontal|top"
+        android:gravity="left"
+        android:layout_centerInParent="true"
         android:text="@string/exercise_given"
         android:textAppearance="@style/edit_profil" />
 
