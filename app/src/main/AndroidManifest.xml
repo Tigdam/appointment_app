@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppointmentApp">
-        <activity android:name=".testing"></activity>
+        <activity android:name=".recyclerviewadaper"></activity>
+        <activity android:name=".testing" />
         <activity android:name=".doctor_login" />
         <activity android:name=".doctor_choosing" />
         <activity android:name=".user_appointment_booking" />
