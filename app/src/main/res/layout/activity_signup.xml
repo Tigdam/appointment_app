@@ -64,7 +64,9 @@
         android:hint="@string/pat_reg_email"
         android:inputType="textPersonName"
         android:textColorHint="#A8504C4C"
-        tools:ignore="RtlCompat,RtlSymmetry" />
+        tools:ignore="RtlCompat,RtlSymmetry"
+
+        />
 
     <EditText
         android:id="@+id/pat_reg_pass"
@@ -78,9 +80,35 @@
         android:layout_marginTop="320dp"
         android:background="@drawable/roundtxtbox"
         android:hint="@string/pat_reg_pass"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textColorHint="#A8504C4C"
-        tools:ignore="RtlCompat,RtlSymmetry" />
+        tools:ignore="RtlCompat,RtlSymmetry"/>
+
+    <RelativeLayout
+        android:layout_width="308dp"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textAlignment="viewStart"
+        android:layout_marginTop="700dp"
+        android:background="@drawable/roundtxtbox"
+        android:hint="@string/pat_reg_pass"
+        android:inputType="textPassword"
+        android:textColorHint="#A8504C4C"
+        tools:ignore="RtlCompat,RtlSymmetry">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="308dp"
+            android:layout_height="45dp"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
 
     <EditText
         android:id="@+id/pat_reg_cpass"
@@ -94,7 +122,7 @@
         android:layout_marginTop="390dp"
         android:background="@drawable/roundtxtbox"
         android:hint="@string/pat_reg_cpass"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textColorHint="#A8504C4C"
         tools:ignore="RtlCompat,RtlSymmetry" />
 
@@ -152,4 +180,6 @@
         android:layout_centerInParent="true"
         android:visibility="gone"
         tools:ignore="MissingConstraints"/>
+
+
 </RelativeLayout>

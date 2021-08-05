@@ -11,21 +11,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppointmentApp">
-        <activity android:name=".recyclerviewadaper"></activity>
-        <activity android:name=".testing" />
+        <activity android:name=".testing">
+
+        </activity>
         <activity android:name=".doctor_login" />
         <activity android:name=".doctor_choosing" />
         <activity android:name=".user_appointment_booking" />
         <activity android:name=".doctor_dashboaard" />
         <activity android:name=".user_dashboard" />
-        <activity android:name=".signup" />
-        <activity android:name=".User_Profile" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".signup" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".User_Profile" />
+        <activity android:name=".MainActivity">
+
         </activity>
 
         <meta-data

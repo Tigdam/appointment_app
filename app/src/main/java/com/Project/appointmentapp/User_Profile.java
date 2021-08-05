@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -107,6 +108,7 @@ public class User_Profile extends AppCompatActivity {
 
         patSaveBtn.setOnClickListener(v-> {
 
+
             rootNode=FirebaseDatabase.getInstance();
             reference = rootNode.getReference("Patient_deatails");
             String uid = userID;
@@ -121,9 +123,58 @@ public class User_Profile extends AppCompatActivity {
             String history = patHistory.getText().toString();
             String address = patAddress.getText().toString();
 
+            if(fname.isEmpty()){
+                patFname.setError("Full Name is Required");
+                patFname.requestFocus();
+                return;
+            }
+            if(email.isEmpty()){
+                patEmail.setError("Email is Required");
+                patEmail.requestFocus();
+                return;
+            }
+            if(dob.isEmpty()){
+                patDOB.setError("DOB is Required");
+                patDOB.requestFocus();
+                return;
+            }
+            if(mob.isEmpty()){
+                patMob.setError("Mobile Number is Required");
+                patMob.requestFocus();
+                return;
+            }
+            if(prof.isEmpty()){
+                patProfession.setError("Profession is Required");
+                patProfession.requestFocus();
+                return;
+            }
+            if(weight.isEmpty()){
+                patWeight.setError("Weight is Required");
+                patWeight.requestFocus();
+                return;
+            }
+            if(height.isEmpty()){
+                patHeight.setError("Height is Required");
+                patHeight.requestFocus();
+                return;
+            }
+            if(history.isEmpty()){
+                patHistory.setError("History is Required");
+                patHistory.requestFocus();
+                return;
+            }
+            if(address.isEmpty()){
+                patAddress.setError("Address is Required");
+                patAddress.requestFocus();
+                return;
+            }
+
+
             UserHelperClass_patedit helperClass = new UserHelperClass_patedit(uid,fname,email, dob,mob,gen,prof,weight,height,history,address);
             reference.child(uid).setValue(helperClass);
 
+
         });
     }
+
 }
