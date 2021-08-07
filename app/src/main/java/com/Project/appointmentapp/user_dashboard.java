@@ -48,6 +48,8 @@ public class user_dashboard extends AppCompatActivity {
             startActivity(new Intent(user_dashboard.this, MainActivity.class));
         });
 
+
+
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
@@ -69,7 +71,7 @@ public class user_dashboard extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull  DatabaseError error) {
-                Toast.makeText(user_dashboard.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(user_dashboard.this, "Something went wrong!"+error, Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -170,7 +170,7 @@ public class User_Profile extends AppCompatActivity {
             }
 
 
-            UserHelperClass_patedit helperClass = new UserHelperClass_patedit(uid,fname,email, dob,mob,gen,prof,weight,height,history,address);
+            UserHelperClass_patedit helperClass = new UserHelperClass_patedit(fname,email, dob,mob,gen,prof,weight,height,history,address, uid);
             reference.child(uid).setValue(helperClass);
 
 

@@ -1,60 +1,51 @@
 package com.Project.appointmentapp;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
+public class admin_login extends AppCompatActivity {
 
-public class MainActivity extends AppCompatActivity {
-
-    EditText editTextEmail, editTextPassword;
-    Button signin;
-    TextView forgotpassword,sigupbtn, gotoDoctor;
+    EditText adminEmail, adminPassword;
+    Button adminLogin;
 
     FirebaseAuth mAuth;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_admin_login);
 
-        editTextEmail = findViewById(R.id.pat_log_email);
-        editTextPassword = findViewById(R.id.pat_log_pass);
-        forgotpassword = findViewById(R.id.pat_log_fpass);
-        sigupbtn = findViewById(R.id.pat_log_signup);
-        gotoDoctor = findViewById(R.id.doc_log);
-
-        gotoDoctor.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, doctor_login.class));
-        });
-
-        signin = findViewById(R.id.pat_log_submit);
-
-        sigupbtn.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, signup.class));
-        });
+        adminEmail = findViewById(R.id.admin_log_email);
+        adminPassword = findViewById(R.id.admin_log_pass);
+        adminLogin = findViewById(R.id.admin_log_submit);
 
         mAuth = FirebaseAuth.getInstance();
 
-        signin.setOnClickListener(v -> {
-            String email = editTextEmail.getText().toString().trim();
-            String password = editTextPassword.getText().toString().trim();
+        adminLogin.setOnClickListener(v -> {
 
-            if(password.isEmpty()){
+            String userEnterEmail = adminEmail.getText().toString().trim();
+            String userEnteredPassword = adminPassword.getText().toString().trim();
+
+            /*if(password.isEmpty()){
                 editTextPassword.setError("Password is Required");
                 editTextPassword.requestFocus();
                 return;
@@ -74,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
                 editTextPassword.requestFocus();
                 return;
             }
-
-            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+*/
+            mAuth.signInWithEmailAndPassword(userEnterEmail, userEnteredPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
@@ -91,24 +82,18 @@ public class MainActivity extends AppCompatActivity {
                             user.isEmailVerified();
                             Toast.makeText(MainActivity.this, "Check your email to verify your email", Toast.LENGTH_SHORT).show();
                         }*/
-                        startActivity(new Intent(MainActivity.this, user_dashboard.class));
+                        startActivity(new Intent(admin_login.this, admin_deshboard.class));
 
                     }
                     else {
-                        Toast.makeText(MainActivity.this, "Failed to login! Check your credentials", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(admin_login.this, "Failed to login! Check your credentials", Toast.LENGTH_SHORT).show();
 
                     }
                 }
             });
         });
 
-        forgotpassword.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, ForgetPassword.class);
-            startActivity(intent);
-        });
+
 
     }
-
-
 }
-

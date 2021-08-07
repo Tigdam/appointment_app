@@ -55,7 +55,7 @@
     <string name="pat_log_fpass">Forgot password?</string>
 
     <!--Doctor Login-->
-    <string name="doc_log_signup">Sign Up</string>
+    <string name="doc_log_signup">I am Admin</string>
     <string name="doc_log_submit">Sign In</string>
     <string name="doc_log_email">Enter your email</string>
     <string name="doc_log_pass">Enter your password</string>

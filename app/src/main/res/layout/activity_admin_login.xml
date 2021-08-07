@@ -1,68 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/sign_up"
+    android:id="@+id/doc_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/signupback"
-    tools:context=".MainActivity">
+    tools:context=".admin_login">
 
 
     <EditText
-        android:id="@+id/pat_log_email"
+        android:id="@+id/admin_log_email"
         android:layout_width="308dp"
         android:layout_height="45dp"
         android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="370dp"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:textAlignment="viewStart"
-        tools:ignore="RtlCompat,RtlSymmetry"
-        android:paddingLeft="16dp"
         android:background="@drawable/roundtxtbox"
-        android:hint="@string/pat_log_email"
+        android:gravity="center"
+        android:hint="@string/doc_log_email"
         android:inputType="textEmailAddress"
+        android:paddingLeft="16dp"
+        android:textAlignment="viewStart"
         android:textColorHint="#A8504C4C"
-        />
+        tools:ignore="RtlCompat,RtlSymmetry" />
 
     <EditText
-        android:id="@+id/pat_log_pass"
+        android:id="@+id/admin_log_pass"
         android:layout_width="308dp"
         android:layout_height="45dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="440dp"
-        android:gravity="center"
         android:layout_centerInParent="true"
-        android:textAlignment="viewStart"
-        tools:ignore="RtlCompat,RtlSymmetry"
+        android:layout_marginTop="440dp"
         android:background="@drawable/roundtxtbox"
-        android:hint="@string/pat_log_pass"
+        android:gravity="center"
+        android:hint="@string/doc_log_pass"
         android:inputType="textPassword"
         android:paddingLeft="16dp"
-        android:textColorHint="#A8504C4C" />
+        android:textAlignment="viewStart"
+        android:textColorHint="#A8504C4C"
+        tools:ignore="RtlCompat,RtlSymmetry" />
 
     <TextView
-        android:id="@+id/pat_log_fpass"
+        android:id="@+id/admin_log_fpass"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="510dp"
         android:gravity="center"
-        android:layout_centerInParent="true"
-        android:text="@string/pat_log_fpass"
+        android:text="@string/doc_log_fpass"
         android:textAppearance="@style/forgot_pass" />
 
     <Button
-        android:id="@+id/pat_log_submit"
+        android:id="@+id/admin_log_submit"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="308dp"
         android:layout_height="58dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="565dp"
-        android:gravity="center"
         android:layout_centerInParent="true"
+        android:layout_marginTop="565dp"
         android:background="@drawable/round_btn"
-        android:text="@string/pat_log_submit"
+        android:gravity="center"
+        android:text="@string/doc_log_submit"
         android:textAppearance="@style/button"
         android:textStyle="bold" />
 
@@ -85,38 +85,6 @@
         android:textAppearance="@style/welcome_bac"
         android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/dont_have_a"
-        android:layout_width="214dp"
-        android:layout_height="21dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="655dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginRight="140dp"
-        android:gravity="center_horizontal|top"
-        android:text="@string/dont_have_a"
-        android:textAppearance="@style/dont_have_a" />
-
-    <TextView
-        android:id="@+id/pat_log_signup"
-        android:layout_width="75dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="295dp"
-        android:layout_marginTop="655dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginRight="65dp"
-        android:gravity="center_horizontal|top"
-        android:text="@string/pat_log_signup"
-        android:textAppearance="@style/pat_log_signup" />
 
     <ImageView
         android:id="@+id/loginpic"
@@ -133,16 +101,4 @@
         android:layout_marginRight="45dp"
         android:src="@drawable/loginpic" />
 
-    <TextView
-        android:id="@+id/doc_log"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="700dp"
-        android:gravity="center"
-        android:text="@string/doc_log"
-        android:textAppearance="@style/doc_log" />
-
 </RelativeLayout>
-

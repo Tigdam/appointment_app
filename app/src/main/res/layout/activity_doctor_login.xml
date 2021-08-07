@@ -87,34 +87,17 @@
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/dont_have_a"
-        android:layout_width="214dp"
-        android:layout_height="21dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginLeft="65dp"
-        android:layout_marginTop="655dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginRight="140dp"
-        android:gravity="center_horizontal|top"
-        android:text="@string/dont_have_a"
-        android:textAppearance="@style/dont_have_a" />
-
-    <TextView
-        android:id="@+id/doc_log_signup"
-        android:layout_width="75dp"
+        android:id="@+id/admin_log_signup"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="295dp"
-        android:layout_marginTop="655dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginRight="65dp"
+        android:layout_marginLeft="119dp"
+        android:layout_marginTop="661dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginRight="117dp"
         android:gravity="center_horizontal|top"
         android:text="@string/doc_log_signup"
         android:textAppearance="@style/pat_log_signup" />
