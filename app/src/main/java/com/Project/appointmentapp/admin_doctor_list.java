@@ -12,22 +12,20 @@ import android.widget.ImageView;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Doctor_List extends AppCompatActivity {
-
+public class admin_doctor_list extends AppCompatActivity {
     private ImageView add;
     private RecyclerView recyclerView;
-    //private nAdaptor adapter;
-
+    private nAdaptor adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doctor_list);
+        setContentView(R.layout.activity_admin_doctor_list);
 
         add= findViewById(R.id.add);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Doctor_List.this, MainActivity.class);
+                Intent intent = new Intent(admin_doctor_list.this, admin_AddDoc.class);
                 startActivity(intent);
 
             }
@@ -35,13 +33,13 @@ public class Doctor_List extends AppCompatActivity {
 
         recyclerView= findViewById(R.id.recycle);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-       /* FirebaseRecyclerOptions<nList> options =
+        FirebaseRecyclerOptions<nList> options =
                 new FirebaseRecyclerOptions.Builder<nList>()
 
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors"),nList.class)
                         .setLifecycleOwner(this)
                         .build();
         nAdaptor adapter= new nAdaptor(options,this);
-        recyclerView.setAdapter(adapter);*/
+        recyclerView.setAdapter(adapter);
     }
 }

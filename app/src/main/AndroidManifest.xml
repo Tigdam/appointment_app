@@ -11,16 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppointmentApp">
-        <activity
-            android:name=".Doctor_List"
-            android:exported="true" />
-        <activity
-            android:name=".admin_deshboard"
-            android:exported="true" />
-        <activity
-            android:name=".admin_login"
-            android:exported="true" />
-        <activity android:name=".recyclerviewadaper" />
+        <activity android:name=".admin_AddDoc" />
+        <activity android:name=".admin_deshboard" />
+        <activity android:name=".admin_login" />
+        <activity android:name=".admin_doctor_list" />
+
         <activity android:name=".testing" />
         <activity android:name=".doctor_login" />
         <activity android:name=".doctor_choosing" />

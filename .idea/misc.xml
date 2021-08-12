@@ -5,13 +5,14 @@
       <map>
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_admin_add_doc.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_admin_deshboard.xml" value="0.22239583333333332" />
+        <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_admin_doctor_list.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_admin_login.xml" value="0.23282051282051283" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_admin_page.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_doctor_choosing.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_doctor_dashboaard.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_doctor_list.xml" value="0.22239583333333332" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_doctor_login.xml" value="0.23282051282051283" />
-        <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_dr_edit_profile.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_dr_edit_profile.xml" value="0.264" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_forget_password.xml" value="0.23282051282051283" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_main.xml" value="0.23282051282051283" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_patient_list.xml" value="0.23645833333333333" />
@@ -21,8 +22,10 @@
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_user_dashboard.xml" value="0.23282051282051283" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_user_history.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_user_profile.xml" value="0.23282051282051283" />
+        <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/content.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/doc_list_item.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/patient_list_cv.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Nikhil/AndroidStudioProjects/appointment_app/app/src/main/res/layout/post.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/RUGVED/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_doctor_login.xml" value="0.2101851851851852" />
         <entry key="..\:/Users/RUGVED/AndroidStudioProjects/appointment_app/app/src/main/res/layout/activity_patient_list.xml" value="0.1" />
       </map>

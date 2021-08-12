@@ -18,7 +18,7 @@ public class admin_deshboard extends AppCompatActivity {
         button = findViewById(R.id.button);
 
         button.setOnClickListener(v -> {
-            startActivity(new Intent(admin_deshboard.this, admin_AddDoc.class));
+            startActivity(new Intent(admin_deshboard.this, admin_doctor_list.class));
         });
     }
 }
