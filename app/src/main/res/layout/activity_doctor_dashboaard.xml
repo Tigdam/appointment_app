@@ -1,21 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/adminbackground"
     tools:context=".doctor_dashboaard">
 
 
+    <ImageView
+        android:id="@+id/docimg"
+        android:layout_width="115dp"
+        android:layout_height="110dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="287dp"
+        android:layout_marginRight="287dp"
+        android:src="@drawable/naruto" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/doctor_name_doc_dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="298dp"
-        android:layout_marginEnd="131dp"
-        android:layout_marginRight="131dp"
-        android:text="Doctor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textSize="33dp"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="187dp"
+        android:layout_marginLeft="187dp"
+        android:layout_marginTop="77dp"
+        android:fontFamily="@font/poppins"
+        android:maxLines="1"
+        android:text="@string/CV_doc_list"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/appoint_conf_btn_doc_dash"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="308dp"
+        android:layout_height="58dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginRight="62dp"
+        android:background="@drawable/doc_side_round_btn"
+        android:gravity="center"
+        android:text="@string/appointment_confirmation"
+        android:textAppearance="@style/doc_button"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/patient_list_btn_doc_dash"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="308dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/appoint_rescheduling_btn_doc_dash2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginLeft="66dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginRight="58dp"
+        android:background="@drawable/doc_side_round_btn"
+        android:gravity="center"
+        android:text="@string/patient_list_btn"
+        android:textAppearance="@style/button"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/appoint_rescheduling_btn_doc_dash2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="308dp"
+        android:layout_height="58dp"
+        android:layout_below="@+id/appoint_conf_btn_doc_dash"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="62dp"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginRight="62dp"
+        android:background="@drawable/doc_side_round_btn"
+        android:gravity="center"
+        android:text="@string/rescheduling_btn"
+        android:textAppearance="@style/button"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -128,6 +128,10 @@
     <string name="AP_add_doctor">Add</string>
     <string name="my_patients">Patient List</string>
     <string name="CV_doc_list">Doctor_name</string>
+    <string name="appointment_confirmation">Appointment confirmation</string>
+    <string name="rescheduling_btn">Reschedule</string>
+    <string name="patient_list_btn">Patient List</string>
+    <string name="CV_patient_name">patient name</string>
 
 
     <string-array name="gender_array">

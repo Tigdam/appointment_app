@@ -36,6 +36,19 @@
         <item name="android:color">
             @color/Strong_pink
         </item>
+    </style>
+
+    <style name="doc_button">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+        <item name="android:textStyle">
+            bold
+        </item>
+        <item name="android:color">
+            @color/neon_green
+        </item>
 
         <item name="android:textColor">
             #FFFFFF

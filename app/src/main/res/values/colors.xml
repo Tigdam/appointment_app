@@ -16,5 +16,6 @@
     <color name="colorTintedBackground">#cdcdcd</color>
     <color name="deepblue">#005B84</color>
     <color name="gray">#404040</color>
-
+    <color name="neon_green">#8BC34A</color>
+    <color name="background_blue">#005B84</color>
 </resources>
