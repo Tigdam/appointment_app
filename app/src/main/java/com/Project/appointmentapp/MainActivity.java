@@ -16,6 +16,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     TextView forgotpassword,sigupbtn, gotoDoctor;
 
     FirebaseAuth mAuth;
+    String type = "doctor";
 
 
     @Override
@@ -51,20 +56,21 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         signin.setOnClickListener(v -> {
-            String email = editTextEmail.getText().toString().trim();
+            final String[] email = {editTextEmail.getText().toString().trim()};
             String password = editTextPassword.getText().toString().trim();
+
 
             if(password.isEmpty()){
                 editTextPassword.setError("Password is Required");
                 editTextPassword.requestFocus();
                 return;
             }
-            if(email.isEmpty()){
+            if(email[0].isEmpty()){
                 editTextEmail.setError("Email is Required");
                 editTextEmail.requestFocus();
                 return;
             }
-            if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            if(!Patterns.EMAIL_ADDRESS.matcher(email[0]).matches()) {
                 editTextEmail.setError("Please provide valid email");
                 editTextEmail.requestFocus();
                 return;
@@ -75,11 +81,46 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
-            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+
+            mAuth.signInWithEmailAndPassword(email[0], password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                        String uid = task.getResult().getUser().getUid();
+
+
+                        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                        firebaseDatabase.getReference().child("Users").child(uid).child("usertype").addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                int usertype = snapshot.getValue(Integer.class);
+
+
+                                if(usertype == 0){
+                                    Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(MainActivity.this, user_dashboard.class));
+                                }
+
+
+
+                                //Toast.makeText(MainActivity.this, "Check your email to verify your email", Toast.LENGTH_SHORT).show();
+
+
+
+
+
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+
+
+                            }
+                        });
 
                         /*assert user != null;
                         if(user.isEmailVerified())
@@ -91,7 +132,9 @@ public class MainActivity extends AppCompatActivity {
                             user.isEmailVerified();
                             Toast.makeText(MainActivity.this, "Check your email to verify your email", Toast.LENGTH_SHORT).show();
                         }*/
-                        startActivity(new Intent(MainActivity.this, user_dashboard.class));
+
+
+
 
                     }
                     else {

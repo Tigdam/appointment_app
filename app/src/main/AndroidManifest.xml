@@ -11,21 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppointmentApp">
-        <activity
-            android:name=".patient_list_page"
-            android:exported="true" />
-        <activity
-            android:name=".appointment_confirmation_page"
-            android:exported="true" />
-        <activity
-            android:name=".Doctor_List"
-            android:exported="true" />
-        <activity
-            android:name=".admin_deshboard"
-            android:exported="true" />
-        <activity
-            android:name=".admin_login"
-            android:exported="true" />
+
+        <!--admin-->
+        <activity android:name=".patient_list_page" />
+        <activity android:name=".appointment_confirmation_page" />
+
         <activity android:name=".recyclerviewadaper" />
         <activity android:name=".admin_AddDoc" />
         <activity android:name=".admin_deshboard" />
@@ -33,11 +23,9 @@
         <activity android:name=".admin_doctor_list" />
 
         <activity android:name=".testing" />
-        <activity android:name=".doctor_login" />
-        <activity android:name=".doctor_choosing" />
-        <activity android:name=".user_appointment_booking" />
-        <activity android:name=".doctor_dashboaard" />
-        <activity android:name=".user_dashboard" />
+
+
+        <!--patients-->
         <activity android:name=".signup" />
         <activity android:name=".User_Profile" />
         <activity android:name=".MainActivity">
@@ -47,6 +35,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".user_dashboard" />
+
+        <!--doctors-->
+        <activity android:name=".doctor_login" />
+        <activity android:name=".doctor_choosing" />
+        <activity android:name=".user_appointment_booking" />
+        <activity android:name=".doctor_dashboaard" />
+        <activity android:name=".dr_edit_profile"/>
 
         <meta-data
             android:name="preloaded_fonts"

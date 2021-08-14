@@ -72,6 +72,29 @@ public class admin_login extends AppCompatActivity {
                     if(task.isSuccessful()){
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+                        String uid = task.getResult().getUser().getUid();
+                        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                        firebaseDatabase.getReference().child("admin_login").child(uid).child("usertype").addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                int usertype = snapshot.getValue(Integer.class);
+                                if(usertype == 3){
+                                    startActivity(new Intent(admin_login.this, admin_deshboard.class));
+                                }
+
+
+
+
+
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                                //Toast.makeText(MainActivity.this, "Check your email to verify your email", Toast.LENGTH_SHORT).show();
+
+                            }
+                        });
                         /*assert user != null;
                         if(user.isEmailVerified())
                         {
@@ -82,7 +105,7 @@ public class admin_login extends AppCompatActivity {
                             user.isEmailVerified();
                             Toast.makeText(MainActivity.this, "Check your email to verify your email", Toast.LENGTH_SHORT).show();
                         }*/
-                        startActivity(new Intent(admin_login.this, admin_deshboard.class));
+
 
                     }
                     else {

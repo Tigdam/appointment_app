@@ -1,7 +1,7 @@
 package com.Project.appointmentapp;
 
 public class UserHelperClass_DocEP {
-    String Doc_Fname,Doc_Lname,Doc_Email,Doc_Mob,Doc_DOB,Doc_Qual,Doc_Exp,Doc_Spec,Doc_FTimme,Doc_TTime,Doc_About,Doc_Add;
+    String Doc_Fname,Doc_Lname,Doc_Email,Doc_Mob,Doc_DOB,Doc_Qual,Doc_Exp,Doc_Spec,Doc_FTimme,Doc_TTime,Doc_About,Doc_Add,uid;
 
     public UserHelperClass_DocEP() {
     }
@@ -102,7 +102,7 @@ public class UserHelperClass_DocEP {
         Doc_Add = doc_Add;
     }
 
-    public UserHelperClass_DocEP(String doc_Fname, String doc_Lname, String doc_Email, String doc_Mob, String doc_DOB, String doc_Qual, String doc_Exp, String doc_Spec, String doc_FTimme, String doc_TTime, String doc_About, String doc_Add) {
+    public UserHelperClass_DocEP(String doc_Fname, String doc_Lname, String doc_Email, String doc_Mob, String doc_DOB, String doc_Qual, String doc_Exp, String doc_Spec, String doc_FTimme, String doc_TTime, String doc_About, String doc_Add, String uid) {
         Doc_Fname = doc_Fname;
         Doc_Lname = doc_Lname;
         Doc_Email = doc_Email;
@@ -115,5 +115,6 @@ public class UserHelperClass_DocEP {
         Doc_TTime = doc_TTime;
         Doc_About = doc_About;
         Doc_Add = doc_Add;
+        this.uid = uid;
     }
 }

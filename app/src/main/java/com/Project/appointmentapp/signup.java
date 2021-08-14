@@ -32,6 +32,7 @@ public class signup extends AppCompatActivity {
     ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
+    FirebaseDatabase firebaseDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,7 @@ public class signup extends AppCompatActivity {
             String email = regEmail.getText().toString().trim();
             String password = regPassword.getText().toString().trim();
             String fullName = regUsername.getText().toString().trim();
+            String uid = null;
 
             if(fullName.isEmpty()){
                 regUsername.setError("Full Name is Required");
@@ -95,8 +97,12 @@ public class signup extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                UserHelperClass_signup userHelperClass_signup = new UserHelperClass_signup(fullName, email, password);
+                                UserHelperClass_signup userHelperClass_signup = new UserHelperClass_signup(uid, fullName, email, password, 0);
 
+                               /* String uid =  Objects.requireNonNull(Objects.requireNonNull(task.getResult()).getUser()).getUid();
+                                firebaseDatabase.getReference().child("Users").child(uid).setValue(userHelperClass_signup);*/
+
+                                
                                 FirebaseDatabase.getInstance().getReference("Users")
                                         .child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
                                         .setValue(userHelperClass_signup).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -115,6 +121,7 @@ public class signup extends AppCompatActivity {
                                         }
                                     }
                                 });
+
                             }
                         }
                     });

@@ -2,7 +2,8 @@ package com.Project.appointmentapp;
 
 public class UserHelperClass_signup {
 
-    String  fullName, email, password;
+    String  fullName, email, password, uid;
+    int usertype;
 
     public UserHelperClass_signup() {
     }
@@ -31,9 +32,27 @@ public class UserHelperClass_signup {
         this.password = password;
     }
 
-    public UserHelperClass_signup(String fullName, String email, String password) {
+    public int getUsertype() {
+        return usertype;
+    }
+
+    public void setUsertype(int usertype) {
+        this.usertype = usertype;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public UserHelperClass_signup(String uid, String fullName, String email, String password, int usertype) {
+        this.uid = uid;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
+        this.usertype = usertype;
     }
 }

@@ -13,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -25,11 +27,14 @@ public class dr_edit_profile extends AppCompatActivity {
     EditText docFname, docLname, docEmail, docAddress, docMob, docQualification, docExp, docSpec,
             docFTime, docTTime, docAbout;
     Spinner docGender,docAvail;
-        private int mYear, mMonth, mDay;
-        TextView docDOB;
+    private int mYear, mMonth, mDay;
+    TextView docDOB;
+    FirebaseUser user;
 
-        FirebaseDatabase rootNode;
-        DatabaseReference reference;
+    String userID;
+
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,10 +106,15 @@ public class dr_edit_profile extends AppCompatActivity {
             }
         });
 
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("doctors");
+        userID = user.getUid();
+
         save.setOnClickListener(v->{
-           /* rootNode=FirebaseDatabase.getInstance();
+           rootNode=FirebaseDatabase.getInstance();
             reference = rootNode.getReference("doctor_details");
 
+            String uid = userID;
             String Doc_Fname=docFname.getText().toString();
             String Doc_Lname=docLname.getText().toString();
             String Doc_Email=docEmail.getText().toString();
@@ -124,8 +134,8 @@ public class dr_edit_profile extends AppCompatActivity {
 
             docAvail=findViewById(R.id.doc_ep_avail_spinner);
 
-            UserHelperClass_DocEP helperClass=new UserHelperClass_DocEP(Doc_Fname,Doc_Lname,Doc_Email,Doc_Mob,Doc_DOB,Doc_Qual,Doc_Exp,Doc_Spec,Doc_FTimme,Doc_TTime,Doc_About,Doc_Add);
-            reference.child(Doc_Fname).setValue(helperClass);*/
+            UserHelperClass_DocEP helperClass=new UserHelperClass_DocEP(Doc_Fname,Doc_Lname,Doc_Email,Doc_Mob,Doc_DOB,Doc_Qual,Doc_Exp,Doc_Spec,Doc_FTimme,Doc_TTime,Doc_About,Doc_Add,uid);
+            reference.child(Doc_Fname).setValue(helperClass);
 
         });
 

@@ -1,13 +1,30 @@
 package com.Project.appointmentapp;
 
 public class nList {
-    String DocName, Doc_Email, Doc_Password;
+    String DocName, Doc_Email, Doc_Password ,uid;
+    int usertype;
 
     public nList() {
     }
 
     public String getDocName() {
         return DocName;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public int getUsertype() {
+        return usertype;
+    }
+
+    public void setUsertype(int usertype) {
+        this.usertype = usertype;
     }
 
     public void setDocName(String docName) {
@@ -30,9 +47,11 @@ public class nList {
         Doc_Password = doc_Password;
     }
 
-    public nList(String docName, String doc_Email, String doc_Password) {
+    public nList( String uid, String docName, String doc_Email, String doc_Password, int usertype) {
+        this.uid = uid;
         DocName = docName;
         Doc_Email = doc_Email;
         Doc_Password = doc_Password;
+        this.usertype = usertype;
     }
 }
