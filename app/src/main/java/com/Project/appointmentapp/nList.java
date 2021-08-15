@@ -1,7 +1,7 @@
 package com.Project.appointmentapp;
 
 public class nList {
-    String DocName, Doc_Email, Doc_Password ,uid;
+    String DocName, Doc_Email, Doc_Password ,uid, doctor;
     int usertype;
 
     public nList() {
@@ -47,11 +47,20 @@ public class nList {
         Doc_Password = doc_Password;
     }
 
-    public nList( String uid, String docName, String doc_Email, String doc_Password, int usertype) {
+    public String getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(String doctor) {
+        this.doctor = doctor;
+    }
+
+    public nList(String uid, String docName, String doc_Email, String doc_Password,int usertype , String doctor ) {
         this.uid = uid;
         DocName = docName;
         Doc_Email = doc_Email;
         Doc_Password = doc_Password;
         this.usertype = usertype;
+        this.doctor = doctor;
     }
 }

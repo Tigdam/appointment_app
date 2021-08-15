@@ -77,6 +77,7 @@ public class admin_AddDoc extends AppCompatActivity {
             String password = Dpassword.getText().toString().trim();
             String fullName = Dname.getText().toString().trim();
             String uid = null;
+            String doctor = "DOCTOR";
 
 
 
@@ -86,7 +87,7 @@ public class admin_AddDoc extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                nList userHelperClass_signup = new nList(uid, fullName, email, password, 1);
+                                nList userHelperClass_signup = new nList(uid, fullName, email, password, 1,doctor);
 
                                 FirebaseDatabase.getInstance().getReference("doctors")
                                         .child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))

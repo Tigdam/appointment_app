@@ -103,14 +103,13 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(MainActivity.this, user_dashboard.class));
                                 }
+                                else  if(usertype == 1){
+                                    startActivity(new Intent(MainActivity.this, doctor_dashboaard.class));
+                                }
 
 
 
                                 //Toast.makeText(MainActivity.this, "Check your email to verify your email", Toast.LENGTH_SHORT).show();
-
-
-
-
 
 
                             }

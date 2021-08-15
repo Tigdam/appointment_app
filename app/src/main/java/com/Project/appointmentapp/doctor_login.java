@@ -80,6 +80,7 @@ public class doctor_login extends AppCompatActivity {
 
 
                         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+
                         firebaseDatabase.getReference().child("doctors").child(uid).child("usertype").addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -87,6 +88,11 @@ public class doctor_login extends AppCompatActivity {
                                 if(usertype == 1){
                                     startActivity(new Intent(doctor_login.this, doctor_dashboaard.class));
                                 }
+                                if(usertype == 2){
+                                    startActivity(new Intent(doctor_login.this, admin_deshboard.class));
+                                }
+
+
 
 
 
