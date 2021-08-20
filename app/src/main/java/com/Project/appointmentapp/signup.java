@@ -97,13 +97,13 @@ public class signup extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                UserHelperClass_signup userHelperClass_signup = new UserHelperClass_signup(uid, fullName, email, password, 0);
+                                UserHelperClass_signup userHelperClass_signup = new UserHelperClass_signup(uid, fullName, email, password, 2);
 
                                /* String uid =  Objects.requireNonNull(Objects.requireNonNull(task.getResult()).getUser()).getUid();
                                 firebaseDatabase.getReference().child("Users").child(uid).setValue(userHelperClass_signup);*/
 
                                 
-                                FirebaseDatabase.getInstance().getReference("Users")
+                                FirebaseDatabase.getInstance().getReference("Patient_deatails")
                                         .child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
                                         .setValue(userHelperClass_signup).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
@@ -121,6 +121,26 @@ public class signup extends AppCompatActivity {
                                         }
                                     }
                                 });
+
+                                FirebaseDatabase.getInstance().getReference("all_users")
+                                        .child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
+                                        .setValue(userHelperClass_signup).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful()){
+                                            Toast.makeText(signup.this, "User has been registered successfully", Toast.LENGTH_SHORT).show();
+                                            progressBar.setVisibility(View.GONE);
+                                        }
+                                        else {
+                                            if(task.isSuccessful()){
+                                                Toast.makeText(signup.this, "Failed to registered ", Toast.LENGTH_SHORT).show();
+                                                progressBar.setVisibility(View.GONE);
+                                            }
+
+                                        }
+                                    }
+                                });
+
 
                             }
                         }

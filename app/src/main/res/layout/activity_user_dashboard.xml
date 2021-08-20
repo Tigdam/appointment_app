@@ -93,10 +93,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="220dp"
         android:elevation="6dp"
         android:gravity="center_horizontal|top"
-        android:layout_centerInParent="true"
         android:text="@string/user_name"
         android:textAppearance="@style/in_rect_elevation"
         android:textSize="18sp" />

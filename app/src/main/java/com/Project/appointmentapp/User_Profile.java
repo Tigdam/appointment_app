@@ -1,5 +1,6 @@
 package com.Project.appointmentapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -14,11 +15,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 
@@ -30,7 +35,7 @@ public class User_Profile extends AppCompatActivity {
 
     ImageView imageView;
     Button patSaveBtn;
-    EditText patFname, patLname, patEmail, patMob, patProfession, patWeight, patHeight, patHistory, patAddress;
+    EditText patFname, patLname,  patMob, patProfession, patWeight, patHeight, patHistory, patAddress;
     private int mYear, mMonth, mDay;
     Spinner patGender;
     TextView patDOB;
@@ -46,7 +51,7 @@ public class User_Profile extends AppCompatActivity {
         imageView = findViewById(R.id.profile_img);
 //        date_of_birth = findViewById(R.id.dob);
         patFname=findViewById(R.id.pat_ep_fullname);
-        patEmail=findViewById(R.id.pat_ep_emailid);
+
         patDOB=findViewById(R.id.pat_ep_dob);
         patGender=findViewById(R.id.pat_ep_gender_spinner);
         patMob=findViewById(R.id.pat_ep_mobile);
@@ -103,8 +108,38 @@ public class User_Profile extends AppCompatActivity {
         });
 
         user = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("Users");
+        reference = FirebaseDatabase.getInstance().getReference("all_users");
         userID = user.getUid();
+
+        final TextView nameTextView = (TextView) findViewById(R.id.pat_ep_fullname);
+        final TextView emailTextView = (TextView) findViewById(R.id.pat_ep_emailid);
+
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                UserHelperClass_signup userProfile = snapshot.getValue(UserHelperClass_signup.class);
+
+                if(userProfile != null)
+                {
+                    String fullName = userProfile.fullName;
+                    nameTextView.setText(fullName);
+
+                    String email = userProfile.email;
+                    emailTextView.setText(email);
+
+
+
+
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+                Toast.makeText(User_Profile.this, "Something went wrong!"+error, Toast.LENGTH_SHORT).show();
+            }
+        });
 
         patSaveBtn.setOnClickListener(v-> {
 
@@ -113,7 +148,7 @@ public class User_Profile extends AppCompatActivity {
             reference = rootNode.getReference("Patient_deatails");
             String uid = userID;
             String fname = patFname.getText().toString();
-            String email = patEmail.getText().toString();
+            String email = emailTextView.getText().toString();
             String dob = patDOB.getText().toString();
             String mob = patMob.getText().toString();
             String gen = patGender.toString();
@@ -128,11 +163,7 @@ public class User_Profile extends AppCompatActivity {
                 patFname.requestFocus();
                 return;
             }
-            if(email.isEmpty()){
-                patEmail.setError("Email is Required");
-                patEmail.requestFocus();
-                return;
-            }
+
             if(dob.isEmpty()){
                 patDOB.setError("DOB is Required");
                 patDOB.requestFocus();

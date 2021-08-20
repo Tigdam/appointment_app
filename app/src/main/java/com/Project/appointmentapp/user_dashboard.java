@@ -51,7 +51,7 @@ public class user_dashboard extends AppCompatActivity {
 
 
         user = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("Users");
+        reference = FirebaseDatabase.getInstance().getReference("all_users");
         userID = user.getUid();
 
         final TextView nameTextView = (TextView) findViewById(R.id.user_name);
@@ -59,11 +59,11 @@ public class user_dashboard extends AppCompatActivity {
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                UserHelperClass_signup userProfile = snapshot.getValue(UserHelperClass_signup.class);
+                UserHelperClass_signup userDashboard = snapshot.getValue(UserHelperClass_signup.class);
 
-                if(userProfile != null)
+                if(userDashboard != null)
                 {
-                    String fullName = userProfile.fullName;
+                    String fullName = userDashboard.fullName;
 
                     nameTextView.setText(fullName);
                 }
@@ -71,6 +71,7 @@ public class user_dashboard extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull  DatabaseError error) {
+
                 Toast.makeText(user_dashboard.this, "Something went wrong!"+error, Toast.LENGTH_SHORT).show();
             }
         });

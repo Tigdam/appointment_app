@@ -50,7 +50,17 @@ public class nAdaptor extends FirebaseRecyclerAdapter<nList, nAdaptor.PastViewHo
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseDatabase.getInstance().getReference().child("doctors")
+                FirebaseDatabase.getInstance().getReference().child("all_users")
+                        .child(getRef(0).getKey())
+                        .removeValue()
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+
+                            }
+                        });
+
+                FirebaseDatabase.getInstance().getReference().child("doctor_details")
                         .child(getRef(0).getKey())
                         .removeValue()
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -86,11 +96,21 @@ public class nAdaptor extends FirebaseRecyclerAdapter<nList, nAdaptor.PastViewHo
                     @Override
                     public void onClick(View v) {
                         Map<String,Object> map=new HashMap<>();
-                        map.put("DocName",content_name.getText().toString());
-                        map.put("Doc_Email",content_email.getText().toString());
+                        map.put("docName",content_name.getText().toString());
+                        map.put("doc_Email",content_email.getText().toString());
 
 
-                        FirebaseDatabase.getInstance().getReference().child("doctors")
+                        FirebaseDatabase.getInstance().getReference().child("all_users")
+                                .child(getRef(0).getKey())
+                                .updateChildren(map)
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        dialog.dismiss();
+                                    }
+                                });
+
+                        FirebaseDatabase.getInstance().getReference().child("doctor_details")
                                 .child(getRef(0).getKey())
                                 .updateChildren(map)
                                 .addOnCompleteListener(new OnCompleteListener<Void>() {

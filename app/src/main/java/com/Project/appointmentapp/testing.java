@@ -40,34 +40,6 @@ public class testing extends AppCompatActivity {
         uid = user.getUid();
 
 
-        final TextView nameTextView = nametxt;
-
-        final TextView dobTextView = dobtxt;
-
-        reference.child(uid).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                UserHelperClass_patedit testingpage = snapshot.getValue(UserHelperClass_patedit.class);
-
-                if(testingpage != null)
-                {
-                    String fname = testingpage.fname;
-                    String dob = testingpage.dob;
-
-
-
-                    nameTextView.setText(fname);
-                    dobTextView.setText((dob));
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(testing.this, "Something went wrong!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
 
 
 

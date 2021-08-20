@@ -32,12 +32,13 @@ public class admin_doctor_list extends AppCompatActivity {
         });
 
 
+
         recyclerView= findViewById(R.id.recycle);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         FirebaseRecyclerOptions<nList> options =
                 new FirebaseRecyclerOptions.Builder<nList>()
 
-                        .setQuery(FirebaseDatabase.getInstance().getReference().child("doctors").child("doctors"),nList.class)
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("doctor_details"),nList.class)
                         .setLifecycleOwner(this)
                         .build();
         nAdaptor adapter= new nAdaptor(options,this);

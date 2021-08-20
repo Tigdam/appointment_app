@@ -67,17 +67,16 @@
                     android:textAppearance="@style/first_name_" />
 
 
-
                 <EditText
                     android:id="@+id/pat_ep_fullname"
                     android:layout_width="328dp"
                     android:layout_height="28dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="35dp"
                     android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginLeft="45dp"
+                    android:layout_marginTop="35dp"
                     android:layout_marginEnd="40dp"
                     android:layout_marginRight="40dp"
                     android:background="@drawable/roundtxtbox"
@@ -104,16 +103,16 @@
                     android:text="@string/pat_ep_email_tv"
                     android:textAppearance="@style/email" />
 
-                <EditText
+                <TextView
                     android:id="@+id/pat_ep_emailid"
                     android:layout_width="328dp"
                     android:layout_height="28dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="100dp"
                     android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginLeft="45dp"
+                    android:layout_marginTop="100dp"
                     android:layout_marginEnd="40dp"
                     android:layout_marginRight="40dp"
                     android:background="@drawable/roundtxtbox"

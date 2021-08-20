@@ -1,9 +1,17 @@
 package com.Project.appointmentapp;
 
 public class UserHelperClass_DocEP {
-    String Doc_Fname,Doc_Lname,Doc_Email,Doc_Mob,Doc_DOB,Doc_Qual,Doc_Exp,Doc_Spec,Doc_FTimme,Doc_TTime,Doc_About,Doc_Add,uid;
+    String uid, Doc_Fname, Doc_Email, Doc_Mob, Doc_Gender, Doc_DOB, Doc_Qual, Doc_Exp, Doc_Spec, Doc_FTimme, Doc_TTime, Doc_About, Doc_Add;
 
     public UserHelperClass_DocEP() {
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getDoc_Fname() {
@@ -12,14 +20,6 @@ public class UserHelperClass_DocEP {
 
     public void setDoc_Fname(String doc_Fname) {
         Doc_Fname = doc_Fname;
-    }
-
-    public String getDoc_Lname() {
-        return Doc_Lname;
-    }
-
-    public void setDoc_Lname(String doc_Lname) {
-        Doc_Lname = doc_Lname;
     }
 
     public String getDoc_Email() {
@@ -36,6 +36,14 @@ public class UserHelperClass_DocEP {
 
     public void setDoc_Mob(String doc_Mob) {
         Doc_Mob = doc_Mob;
+    }
+
+    public String getDoc_Gender() {
+        return Doc_Gender;
+    }
+
+    public void setDoc_Gender(String doc_Gender) {
+        Doc_Gender = doc_Gender;
     }
 
     public String getDoc_DOB() {
@@ -102,11 +110,12 @@ public class UserHelperClass_DocEP {
         Doc_Add = doc_Add;
     }
 
-    public UserHelperClass_DocEP(String doc_Fname, String doc_Lname, String doc_Email, String doc_Mob, String doc_DOB, String doc_Qual, String doc_Exp, String doc_Spec, String doc_FTimme, String doc_TTime, String doc_About, String doc_Add, String uid) {
+    public UserHelperClass_DocEP(String uid, String doc_Fname, String doc_Email, String doc_Mob, String doc_Gender, String doc_DOB, String doc_Qual, String doc_Exp, String doc_Spec, String doc_FTimme, String doc_TTime, String doc_About, String doc_Add) {
+        this.uid = uid;
         Doc_Fname = doc_Fname;
-        Doc_Lname = doc_Lname;
         Doc_Email = doc_Email;
         Doc_Mob = doc_Mob;
+        Doc_Gender = doc_Gender;
         Doc_DOB = doc_DOB;
         Doc_Qual = doc_Qual;
         Doc_Exp = doc_Exp;
@@ -115,6 +124,5 @@ public class UserHelperClass_DocEP {
         Doc_TTime = doc_TTime;
         Doc_About = doc_About;
         Doc_Add = doc_Add;
-        this.uid = uid;
     }
 }

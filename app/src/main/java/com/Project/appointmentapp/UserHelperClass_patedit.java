@@ -1,17 +1,17 @@
 package com.Project.appointmentapp;
 
 public class UserHelperClass_patedit {
-    String fname,email, dob,mob,gen,prof,weight,height,history,address, uid;
+    String fullName, email, dob,mob,gen,prof,weight,height,history,address, uid;
 
     public UserHelperClass_patedit() {
     }
 
     public String getFname() {
-        return fname;
+        return fullName;
     }
 
     public void setFname(String fname) {
-        this.fname = fname;
+        this.fullName = fname;
     }
 
 
@@ -97,7 +97,7 @@ public class UserHelperClass_patedit {
     }
 
     public UserHelperClass_patedit(String fname, String email, String dob, String mob, String gen, String prof, String weight, String height, String history, String address, String uid) {
-        this.fname = fname;
+        this.fullName = fname;
         this.email = email;
         this.dob = dob;
         this.mob = mob;

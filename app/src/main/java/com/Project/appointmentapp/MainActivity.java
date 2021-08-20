@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-                        firebaseDatabase.getReference().child("Users").child(uid).child("usertype").addListenerForSingleValueEvent(new ValueEventListener() {
+                        firebaseDatabase.getReference().child("all_users").child(uid).child("usertype").addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 int usertype = snapshot.getValue(Integer.class);
@@ -101,10 +101,13 @@ public class MainActivity extends AppCompatActivity {
 
                                 if(usertype == 0){
                                     Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(MainActivity.this, user_dashboard.class));
+                                    startActivity(new Intent(MainActivity.this, admin_deshboard.class));
                                 }
-                                else  if(usertype == 1){
+                                if(usertype == 1){
                                     startActivity(new Intent(MainActivity.this, doctor_dashboaard.class));
+                                }
+                                if(usertype == 2){
+                                    startActivity(new Intent(MainActivity.this, user_dashboard.class));
                                 }
 
 

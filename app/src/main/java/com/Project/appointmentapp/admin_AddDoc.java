@@ -89,7 +89,26 @@ public class admin_AddDoc extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 nList userHelperClass_signup = new nList(uid, fullName, email, password, 1,doctor);
 
-                                FirebaseDatabase.getInstance().getReference("doctors")
+                                FirebaseDatabase.getInstance().getReference("all_users")
+                                        .child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
+                                        .setValue(userHelperClass_signup).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if(task.isSuccessful()){
+                                            Toast.makeText(admin_AddDoc.this, "User has been registered successfully", Toast.LENGTH_SHORT).show();
+                                            progressBar.setVisibility(View.GONE);
+                                        }
+                                        else {
+                                            if(task.isSuccessful()){
+                                                Toast.makeText(admin_AddDoc.this, "Failed to registered ", Toast.LENGTH_SHORT).show();
+                                                progressBar.setVisibility(View.GONE);
+                                            }
+
+                                        }
+                                    }
+                                });
+
+                                FirebaseDatabase.getInstance().getReference("doctor_details")
                                         .child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
                                         .setValue(userHelperClass_signup).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override

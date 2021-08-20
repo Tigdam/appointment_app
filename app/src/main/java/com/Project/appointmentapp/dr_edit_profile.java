@@ -1,5 +1,6 @@
 package com.Project.appointmentapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -12,11 +13,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 
@@ -24,7 +29,7 @@ public class dr_edit_profile extends AppCompatActivity {
 
     ImageView imageView;
     Button save,cancel;
-    EditText docFname, docLname, docEmail, docAddress, docMob, docQualification, docExp, docSpec,
+    EditText docFname, docEmail, docAddress, docMob, docQualification, docExp, docSpec,
             docFTime, docTTime, docAbout;
     Spinner docGender,docAvail;
     private int mYear, mMonth, mDay;
@@ -43,7 +48,6 @@ public class dr_edit_profile extends AppCompatActivity {
 
         imageView =findViewById(R.id.docimg);
         docFname=findViewById(R.id.doc_ep_fname);
-        docLname=findViewById(R.id.doc_ep_lname);
         docEmail=findViewById(R.id.doc_ep_emailid);
         docAddress=findViewById(R.id.doc_ep_add);
         docGender=findViewById(R.id.doc_ep_gender_spinner);
@@ -106,36 +110,65 @@ public class dr_edit_profile extends AppCompatActivity {
             }
         });
 
+
         user = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("doctors");
+        reference = FirebaseDatabase.getInstance().getReference("all_users");
         userID = user.getUid();
+
+        final TextView DocnameTextView = (TextView) findViewById(R.id.doc_ep_fname);
+        final TextView emailTextView = (TextView) findViewById(R.id.doc_ep_emailid);
+
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                UserHelperClass_DocEP userProfile = snapshot.getValue(UserHelperClass_DocEP.class);
+
+                if(userProfile != null)
+                {
+                    String fullName = userProfile.Doc_Fname;
+                    DocnameTextView.setText(fullName);
+
+                    String email = userProfile.Doc_Email;
+                    emailTextView.setText(email);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+                Toast.makeText(dr_edit_profile.this, "Something went wrong!"+error, Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         save.setOnClickListener(v->{
            rootNode=FirebaseDatabase.getInstance();
             reference = rootNode.getReference("doctor_details");
 
             String uid = userID;
-            String Doc_Fname=docFname.getText().toString();
-            String Doc_Lname=docLname.getText().toString();
-            String Doc_Email=docEmail.getText().toString();
-            String Doc_Mob=docMob.getText().toString();
-            String Doc_DOB=docDOB.getText().toString();
-            String Doc_Qual=docQualification.getText().toString();
-            String Doc_Exp=docExp.getText().toString();
-            String Doc_Spec=docSpec.getText().toString();
-            String Doc_FTimme=docFTime.getText().toString();
-            String Doc_TTime=docTTime.getText().toString();
-            String Doc_About=docAbout.getText().toString();
-            String Doc_Add=docAddress.getText().toString();
+            String Doc_Fname = docFname.getText().toString();
+
+            String Doc_Email = docEmail.getText().toString();
+            String Doc_Mob = docMob.getText().toString();
+            String Doc_Gender = docGender.toString();
+            String Doc_DOB = docDOB.getText().toString();
+            String Doc_Qual = docQualification.getText().toString();
+            String Doc_Exp = docExp.getText().toString();
+            String Doc_Spec = docSpec.getText().toString();
+            String Doc_FTimme = docFTime.getText().toString();
+            String Doc_TTime = docTTime.getText().toString();
+            String Doc_About = docAbout.getText().toString();
+            String Doc_Add = docAddress.getText().toString();
 
 
 
-            docGender=findViewById(R.id.doc_ep_gender_spinner);
+            docGender = findViewById(R.id.doc_ep_gender_spinner);
 
-            docAvail=findViewById(R.id.doc_ep_avail_spinner);
+            docAvail = findViewById(R.id.doc_ep_avail_spinner);
 
-            UserHelperClass_DocEP helperClass=new UserHelperClass_DocEP(Doc_Fname,Doc_Lname,Doc_Email,Doc_Mob,Doc_DOB,Doc_Qual,Doc_Exp,Doc_Spec,Doc_FTimme,Doc_TTime,Doc_About,Doc_Add,uid);
-            reference.child(Doc_Fname).setValue(helperClass);
+            UserHelperClass_DocEP helperClass=new UserHelperClass_DocEP(uid, Doc_Fname,Doc_Email,Doc_Mob,Doc_Gender,Doc_DOB,Doc_Qual,Doc_Exp,Doc_Spec,Doc_FTimme,Doc_TTime,Doc_About,Doc_Add);
+            reference.child(uid).setValue(helperClass);
 
         });
 

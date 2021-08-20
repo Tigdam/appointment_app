@@ -23,7 +23,7 @@
         android:src="@drawable/naruto" />
 
     <TextView
-        android:id="@+id/doctor_name_doc_dashboard"
+        android:id="@+id/doctor_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -31,7 +31,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="187dp"
         android:layout_marginLeft="187dp"
-        android:layout_marginTop="77dp"
+        android:layout_marginTop="76dp"
         android:fontFamily="@font/poppins"
         android:maxLines="1"
         android:text="@string/CV_doc_list"
@@ -101,5 +101,7 @@
         android:text="@string/rescheduling_btn"
         android:textAppearance="@style/button"
         android:textStyle="bold" />
+
+
 
 </RelativeLayout>

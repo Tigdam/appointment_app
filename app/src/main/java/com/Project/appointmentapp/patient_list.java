@@ -51,7 +51,7 @@ public class patient_list extends AppCompatActivity {
 
                 if(testingpage != null)
                 {
-                    String fname = testingpage.fname;
+                    String fname = testingpage.fullName;
                     String dob = testingpage.dob;
 
 
